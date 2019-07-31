@@ -1,40 +1,40 @@
+" __   _(_)_ __ ___  _ __ ___ 
+" \ \ / / | '_ ` _ \| '__/ __|
+"  \ V /| | | | | | | | | (__ 
+" (_)_/ |_|_| |_| |_|_|  \___|
+
 let mapleader = " "
 
 "This thing is needed apparently
-set nocompatible
+	set nocompatible
 
 "To be able to delete with backspace
-set backspace=indent,eol,start
+	set backspace=indent,eol,start
 
 "Tab size thingie
-set tabstop=4
-set shiftwidth=4
+	set tabstop=4
+	set shiftwidth=4
 
 "Display line numbers
-set relativenumber
+	set number relativenumber
 
-"Install vim-plug if not installed
-if empty(glob('~/.vim/autoload/plug.vim'))
-    silent !mkdir -p ~/.vim/autoload
-    silent !curl -fLo ~/.vim/autoload/plug.vim
-                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    autocmd VimEnter * PlugInstall
-endif
 "vim-plug
-call plug#begin()
-	Plug 'msanders/snipmate.vim'
-	Plug 'scrooloose/nerdtree'
-	Plug 'tomtom/tcomment_vim'
-	Plug 'pangloss/vim-javascript'
-call plug#end()
+	if empty(glob('~/.vim/autoload/plug.vim'))
+		silent !mkdir -p ~/.vim/autoload
+		silent !curl -fLo ~/.vim/autoload/plug.vim
+					\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+		autocmd VimEnter * PlugInstall
+	endif
 
-filetype plugin on
+	call plug#begin()
+		Plug 'msanders/snipmate.vim'
+		Plug 'scrooloose/nerdtree'
+		Plug 'tomtom/tcomment_vim'
+		Plug 'pangloss/vim-javascript'
+	call plug#end()
 
-"NERDtree
-map <C-n> :NERDTreeToggle<CR>
+	filetype plugin on
 
-"Tabs
-map <C-t> :tabn<CR>
 
 "Enable autocompletion
 	set wildmode=longest,list,full
@@ -45,16 +45,23 @@ map <C-t> :tabn<CR>
 "Splits open bottom right
 	set splitbelow splitright
 
-"Split navigation
+"Display highlights
+	set hlsearch
+	hi Search ctermbg=Magenta
+	hi Search ctermfg=Black
+
+
+"Mappings
+	"NerdTree toggle
+	map <C-n> :NERDTreeToggle<CR>
+	"Mappings to move around windows
 	map <C-h> <C-w>h
 	map <C-j> <C-w>j
 	map <C-k> <C-w>k
 	map <C-l> <C-w>l
-
-"Open .html
-map <leader>p :!opout <c-r>%<CR><CR>
-
-"Display highlights
-set hlsearch
-hi Search ctermbg=Magenta
-hi Search ctermfg=Black
+	"Open .html in firefox
+	map <leader>p :!opout <c-r>%<CR><CR>
+	"Move faster with j,k
+	map <C-j> 5j
+	map <C-k> 5k
+                            
