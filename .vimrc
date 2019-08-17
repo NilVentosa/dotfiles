@@ -24,13 +24,13 @@ let mapleader = " "
 		silent !curl -fLo ~/.vim/autoload/plug.vim
 					\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 		autocmd VimEnter * PlugInstall
-	endif
-
+	endif 
 	call plug#begin()
 		Plug 'msanders/snipmate.vim'
 		Plug 'scrooloose/nerdtree'
 		Plug 'tomtom/tcomment_vim'
 		Plug 'pangloss/vim-javascript'
+		Plug 'Raimondi/delimitMate'
 	call plug#end()
 
 	filetype plugin on
@@ -61,7 +61,9 @@ let mapleader = " "
 	map <C-l> <C-w>l
 	"Open .html in firefox
 	map <leader>p :!opout <c-r>%<CR><CR>
-	"Move faster with j,k
-	map <C-j> 5j
-	map <C-k> 5k
-                            
+	"Compile and run C
+	map <leader>c :w <CR> :!gcc % -o compiled/%< && clear && ./compiled/%< <CR>
+
+let delimitMate_expand_cr = 1
+filetype indent plugin on
+
