@@ -63,6 +63,8 @@ let mapleader = " "
 	map <leader>p :!opout <c-r>%<CR><CR>
 	"Compile and run C
 	map <leader>c :w <CR> :!gcc % -o compiled/%< && clear && ./compiled/%< <CR>
+	"Save and run python
+	map <leader>p :w <CR> :!python % <CR>
 
 let delimitMate_expand_cr = 1
 filetype indent plugin on
