@@ -1,6 +1,5 @@
 !Fonts
-Rxvt.font: xft:Noto Sans Mono:size=10
-
+Rxvt.font: xft:inconsolata:size=11
 !Misc
 URxvt.scrollBar: false
 
@@ -25,9 +24,13 @@ URxvt.color14:    #9AEDFE
 URxvt.color15:    #E6E6E6
 
 !Extensions
-URxvt.perl-ext-common: resize-font
+URxvt.perl-ext-common: resize-font,default,clipboard,font-size
 
 !resize-font
 URxvt.keysym.C-Down:    resize-font:smaller
 URxvt.keysym.C-Up:       resize-font:bigger
 URxvt.resize-font.step: 1
+
+!copy/paste thing
+URxvt.keysym.Shift-C-V: perl:clipboard:paste
+URxvt.iso14755: False

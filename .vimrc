@@ -8,12 +8,19 @@ let mapleader = " "
 "This thing is needed apparently
 	set nocompatible
 
+"Copy pase
+	set pastetoggle=<F2>
+	set clipboard=unnamed
+
 "To be able to delete with backspace
 	set backspace=indent,eol,start
 
 "Tab size thingie
 	set tabstop=4
 	set shiftwidth=4
+	set softtabstop=4
+	set shiftround
+	set expandtab
 
 "Display line numbers
 	set number relativenumber
@@ -31,6 +38,8 @@ let mapleader = " "
 		Plug 'tomtom/tcomment_vim'
 		Plug 'pangloss/vim-javascript'
 		Plug 'Raimondi/delimitMate'
+        Plug 'tpope/vim-fugitive'
+        Plug 'cespare/vim-toml'
 	call plug#end()
 
 	filetype plugin on
@@ -60,11 +69,11 @@ let mapleader = " "
 	map <C-k> <C-w>k
 	map <C-l> <C-w>l
 	"Open .html in firefox
-	map <leader>p :!opout <c-r>%<CR><CR>
+	map <leader>h :!opout <c-r>%<CR><CR>
 	"Compile and run C
 	map <leader>c :w <CR> :!gcc % -o compiled/%< && clear && ./compiled/%< <CR>
 	"Save and run python
-	map <leader>p :w <CR> :!python % <CR>
+	map <leader>p :w <CR> :!python3 % <CR>
 
 let delimitMate_expand_cr = 1
 filetype indent plugin on

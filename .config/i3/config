@@ -61,16 +61,16 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # Define names for default workspaces for which we configure key bindings later on.
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
+set $ws1 "1: "
+set $ws2 "2: "
+set $ws3 "3: "
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10"
+set $ws9 "9: "
+set $ws10 "10: "
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -128,6 +128,21 @@ bar {
 }
 
 bindsym F1 exec qutebrowser
+
+# media controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86AudioPlay exec playerctl play-pause
+
+# laptop controls
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+
+bindsym $mod+Shift+q exec systemctl suspend
+bindsym $mod+Shift+w exec i3lock -c 000000
 
 exec bash ~/scripts/startup.sh
 
