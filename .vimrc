@@ -35,8 +35,10 @@ let mapleader = " "
 	call plug#begin()
 		Plug 'msanders/snipmate.vim'
 		Plug 'scrooloose/nerdtree'
+        Plug 'vim-python/python-syntax'
 		Plug 'tomtom/tcomment_vim'
 		Plug 'pangloss/vim-javascript'
+        Plug 'dracula/vim', { 'as': 'dracula' }
 		Plug 'Raimondi/delimitMate'
         Plug 'tpope/vim-fugitive'
         Plug 'cespare/vim-toml'
@@ -58,6 +60,11 @@ let mapleader = " "
 	set hlsearch
 	hi Search ctermbg=Magenta
 	hi Search ctermfg=Black
+
+"Syntax and color scheme
+    syntax on
+    colorscheme dracula
+    let g:python_highlight_all = 1
 
 
 "Mappings

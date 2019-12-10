@@ -1,17 +1,30 @@
 #i3status config
 
-order +="disk /"
+order += "battery 0"
+order += "disk /"
+order += "wireless wlp2s0"
 order += "time"
-
-general {
-	colors = true
-	interval = 5
-}
 
 disk "/" {
 	format = "% avail"
 }
 
 time {
-	format = "%b %d - %H:%M"
+	format = " %b %d -  %H:%M"
+}
+
+battery 0 {
+    threshold_type = "time"
+    integer_battery_capacity = "true"
+    low_threshold = "15"
+    format = "%percentage"
+}
+
+disk / {
+    format = "/ %free"
+}
+
+wireless wlp2s0 {
+    format_up = "W"
+    format_down = ""
 }

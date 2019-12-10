@@ -6,6 +6,5 @@ LS_COLORS='rs=0:di=01;103;35:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;
 export LS_COLORS
 # ALIASES
 alias ls='ls --color=auto'
-alias python=python3
-
+alias python='python3'
 export PS1="\[$(tput bold)\]\[$(tput setaf 3)\][\[$(tput setaf 5)\]\u\[$(tput setaf 4)\]@\[$(tput setaf 2)\]\h \[$(tput setaf 14)\]\W\[$(tput setaf 3)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
