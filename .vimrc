@@ -75,12 +75,17 @@ let mapleader = " "
 	map <C-j> <C-w>j
 	map <C-k> <C-w>k
 	map <C-l> <C-w>l
+    "Mapping for moving around tabs
+    map <C-t> :tabnext<cr>
 	"Open .html in firefox
 	map <leader>h :!opout <c-r>%<CR><CR>
 	"Compile and run C
 	map <leader>c :w <CR> :!gcc % -o compiled/%< && clear && ./compiled/%< <CR>
 	"Save and run python
-	map <leader>p :w <CR> :!python3 % <CR>
+	map <leader>p :w <CR> :!python % <CR>
+    "Moving
+    map J 5j
+    map K 5k
 
 let delimitMate_expand_cr = 1
 filetype indent plugin on
