@@ -7,6 +7,11 @@ let mapleader = " "
 
 "This thing is needed apparently
 	set nocompatible
+"vimrc stuff
+    "Open vimrc in a new tab
+    map <C-v> :tabnew ~/.vimrc<CR><CR>
+    "Auto source vimrc after saving
+    autocmd! bufwritepost ~/.vimrc source ~/.vimrc
 
 "Copy pase
 	set pastetoggle=<F2>
@@ -54,7 +59,8 @@ let mapleader = " "
 	autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 "Splits open bottom right
-	set splitbelow splitright
+	set splitbelow 
+    set splitright
 
 "Display highlights
 	set hlsearch
@@ -65,7 +71,6 @@ let mapleader = " "
     syntax on
     colorscheme dracula
     let g:python_highlight_all = 1
-
 
 "Mappings
 	"NerdTree toggle
