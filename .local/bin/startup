@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+
+xrandr --output eDP1 --mode "1920x1200"
+xwallpaper --zoom ~/.local/wallpapers/wallpaper.jpg
+setxkbmap es
+compton --config ~/.config/compton/compton.conf -b
+xrdb ~/.Xresources
+polybar bar &

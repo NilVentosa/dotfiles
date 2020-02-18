@@ -40,17 +40,15 @@ let mapleader = " "
 	call plug#begin()
 		Plug 'msanders/snipmate.vim'
 		Plug 'scrooloose/nerdtree'
-        Plug 'vim-python/python-syntax'
 		Plug 'tomtom/tcomment_vim'
 		Plug 'pangloss/vim-javascript'
         Plug 'dracula/vim', { 'as': 'dracula' }
 		Plug 'Raimondi/delimitMate'
-        Plug 'tpope/vim-fugitive'
         Plug 'cespare/vim-toml'
 	call plug#end()
 
 	filetype plugin on
-
+    let delimitMate_expand_cr = 1
 
 "Enable autocompletion
 	set wildmode=longest,list,full
@@ -58,40 +56,56 @@ let mapleader = " "
 "Disable autocomment
 	autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-"Splits open bottom right
-	set splitbelow 
-    set splitright
-
 "Display highlights
 	set hlsearch
-	hi Search ctermbg=Magenta
-	hi Search ctermfg=Black
 
-"Syntax and color scheme
+ "Syntax and color scheme
     syntax on
     colorscheme dracula
-    let g:python_highlight_all = 1
 
-"Mappings
+"NerdTree
 	"NerdTree toggle
 	map <C-n> :NERDTreeToggle<CR>
-	"Mappings to move around windows
-	map <C-h> <C-w>h
-	map <C-j> <C-w>j
-	map <C-k> <C-w>k
-	map <C-l> <C-w>l
-    "Mapping for moving around tabs
-    map <C-t> :tabnext<cr>
-	"Open .html in firefox
-	map <leader>h :!opout <c-r>%<CR><CR>
+    "Size
+    let g:NERDTreeWinSize=40
+
+"Splits
+    "Splits open bottom right
+        set splitright
+        set splitbelow 
+
+    "Splits movement
+        map <C-h> <C-w>h
+        map <C-j> <C-w>j
+        map <C-k> <C-w>k
+        map <C-l> <C-w>l
+
+"Tabs
+    "Move to next tab
+        map <C-t> :tabnext<cr>
+
+"Compile
 	"Compile and run C
-	map <leader>c :w <CR> :!gcc % -o compiled/%< && clear && ./compiled/%< <CR>
+        map <leader>c :w <CR> :!gcc % -o compiled/%< && clear && ./compiled/%< <CR>
 	"Save and run python
-	map <leader>p :w <CR> :!python % <CR>
-    "Moving
+        map <leader>p :w <CR> :!python % <CR>
+
+"Faster movement
     map J 5j
     map K 5k
+    map L E
+    map H B
 
-let delimitMate_expand_cr = 1
-filetype indent plugin on
+"Autohighlight
+    set updatetime=300
+    function! HighlightWordUnderCursor()
+        if getline(".")[col(".")-1] !~# '[[:punct:][:blank:]]' 
+            exec 'match' 'Search' '/\V\<'.expand('<cword>').'\>/' 
+        else 
+            match none 
+        endif
+    endfunction
+    autocmd! CursorHold,CursorHoldI * call HighlightWordUnderCursor()
 
+"Disable folding
+    set nofoldenable
