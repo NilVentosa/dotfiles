@@ -45,7 +45,6 @@ let mapleader = " "
 		Plug 'pangloss/vim-javascript'
         Plug 'dracula/vim', { 'as': 'dracula' }
 		Plug 'Raimondi/delimitMate'
-        Plug 'tpope/vim-fugitive'
         Plug 'cespare/vim-toml'
 	call plug#end()
 
@@ -59,8 +58,8 @@ let mapleader = " "
 	autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 "Splits open bottom right
-	set splitbelow 
     set splitright
+	set splitbelow 
 
 "Display highlights
 	set hlsearch
@@ -72,9 +71,13 @@ let mapleader = " "
     colorscheme dracula
     let g:python_highlight_all = 1
 
-"Mappings
+"NerdTree
 	"NerdTree toggle
 	map <C-n> :NERDTreeToggle<CR>
+    "Size
+    let g:NERDTreeWinSize=40
+
+"Mappings
 	"Mappings to move around windows
 	map <C-h> <C-w>h
 	map <C-j> <C-w>j
@@ -95,3 +98,13 @@ let mapleader = " "
 let delimitMate_expand_cr = 1
 filetype indent plugin on
 
+" Autohighlight
+set updatetime=300
+function! HighlightWordUnderCursor()
+    if getline(".")[col(".")-1] !~# '[[:punct:][:blank:]]' 
+        exec 'match' 'Search' '/\V\<'.expand('<cword>').'\>/' 
+    else 
+        match none 
+    endif
+endfunction
+autocmd! CursorHold,CursorHoldI * call HighlightWordUnderCursor()
