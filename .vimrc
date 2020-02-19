@@ -11,7 +11,7 @@ let mapleader = " "
     "Open vimrc in a new tab
     map <C-v> :tabnew ~/.vimrc<CR><CR>
     "Auto source vimrc after saving
-    autocmd! bufwritepost ~/.vimrc source ~/.vimrc
+    autocmd! bufwritepost ~/repos/dotfiles/.vimrc source ~/repos/dotfiles/.vimrc
 
 "Copy pase
 	set pastetoggle=<F2>
@@ -93,8 +93,8 @@ let mapleader = " "
 "Faster movement
     map J 5j
     map K 5k
-    map L E
-    map H B
+    map L 5l
+    map H 5h
 
 "Autohighlight
     set updatetime=300
