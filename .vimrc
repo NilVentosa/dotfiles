@@ -107,5 +107,11 @@ let mapleader = " "
     endfunction
     autocmd! CursorHold,CursorHoldI * call HighlightWordUnderCursor()
 
+"Cursorline
+    set cursorline
+    hi cursorline cterm=none term=none
+    autocmd WinEnter * setlocal cursorline
+    autocmd WinLeave * setlocal nocursorline
+
 "Disable folding
     set nofoldenable
