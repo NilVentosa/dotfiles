@@ -125,7 +125,7 @@ super + b
     $BIN/dmenubookmarks
 
 super + alt + b
-    st vim "+normal G$" +startinsert ~/.local/lists/bookmarks 
+    $TERMINAL $EDITOR "+normal G$" +startinsert ~/.local/lists/bookmarks 
 
 # media controls
 XF86AudioRaiseVolume

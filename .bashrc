@@ -8,6 +8,7 @@ export PS1="\[$(tput bold)\]\[$(tput setaf 3)\][\[$(tput setaf 5)\]\u\[$(tput se
 export BIN=~/.local/bin
 export BROWSER=brave
 export EDITOR=vim
+export TERMINAL=st
 
 
 alias colors=$BIN/colors
