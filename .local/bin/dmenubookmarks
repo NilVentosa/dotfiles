@@ -9,9 +9,17 @@ bookmark=$(sort $bookmarksFile | awk -F "," '{print $1}' | dmenu -fn Monospace-1
 
 url=$(grep -m 1 $bookmark $bookmarksFile | awk -F "," '{print $2}')
 
-if [ $url == ''] || [ $BROWSER == '' ]
-then
+if [ $url == ''] || [ $BROWSER == '' ]; then
     exit 1
 else
-    $BROWSER $url
+    case $BROWSER in
+        firefox)
+            firefox -new-tab $url
+            ;;
+        *)
+            $BROWSER $url
+            ;;
+    esac
 fi
+
+

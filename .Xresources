@@ -1,19 +1,47 @@
 ! Dracula Xresources palette
-*.foreground: #F8F8F2
-*.background: #282A36
-*.color0:     #000000
-*.color8:     #4D4D4D
-*.color1:     #FF5555
-*.color9:     #FF6E67
-*.color2:     #50FA7B
-*.color10:    #5AF78E
-*.color3:     #F1FA8C
-*.color11:    #F4F99D
-*.color4:     #BD93F9
-*.color12:    #CAA9FA
-*.color5:     #FF79C6
-*.color13:    #FF92D0
-*.color6:     #8BE9FD
-*.color14:    #9AEDFE
-*.color7:     #BFBFBF
-*.color15:    #E6E6E6
+! *.background: #282A36
+! *.foreground: #F8F8F2
+! *.color0:     #000000
+! *.color1:     #FF5555
+! *.color2:     #50FA7B
+! *.color3:     #F1FA8C
+! *.color4:     #BD93F9
+! *.color5:     #FF79C6
+! *.color6:     #8BE9FD
+! *.color7:     #BFBFBF
+! *.color8:     #4D4D4D
+! *.color9:     #FF6E67
+! *.color10:    #5AF78E
+! *.color11:    #F4F99D
+! *.color12:    #CAA9FA
+! *.color13:    #FF92D0
+! *.color14:    #9AEDFE
+! *.color15:    #E6E6E6
+! special
+*.foreground:   #ffffff
+*.background:   #011627
+*.cursorColor:  #ffffff
+! black
+*.color0:       #000000
+*.color8:       #282828
+! red
+*.color1:       #00fff9
+*.color9:       #00fff9
+! green
+*.color2:       #ff2d7d
+*.color10:      #ff2d7d
+! yellow
+*.color3:       #f7f300
+*.color11:      #f7f300
+! blue
+*.color4:       #ff2d7d
+*.color12:      #ff2d7d
+! magenta
+*.color5:       #ff2d7d
+*.color13:      #ff2d7d
+! cyan
+*.color6:       #00fff9
+*.color14:      #00fff9
+! white
+*.color7:       #ffffff
+*.color15:      #ffffff
