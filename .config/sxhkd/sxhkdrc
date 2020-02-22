@@ -153,6 +153,6 @@ XF86KbdBrightnessDown
 
 # launcher keys
 XF86LaunchA
-    brave
+    $BROWSER
 XF86LaunchB
     exec ranger

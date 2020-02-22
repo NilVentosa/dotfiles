@@ -115,3 +115,12 @@ let mapleader = " "
 
 "Disable folding
     set nofoldenable
+
+"Highlight group
+nmap <leader>h :call SynStack()<CR>
+function! SynStack()
+    if !exists('*synstack')
+        return
+    endif
+    echo map(synstack(line('.'),col('.')), "synIDattr(v:val, 'name')")
+endfunc
