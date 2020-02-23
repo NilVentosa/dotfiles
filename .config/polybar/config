@@ -60,9 +60,14 @@ type = custom/script
 exec = date +%H:%M
  
 [module/battery]
+full-at = 97
 type = internal/battery
 battery = BAT0
 adapter = ADP1
+label-full=100%
+format-charging-underline =${colors.cyan}
+format-discharging-underline =${colors.magenta}
+format-full-underline =${colors.yellow}
 
 [module/bspwm]
 type = internal/bspwm
@@ -71,6 +76,7 @@ label-focused-padding-left = 0
 label-focused-background = ${colors.darkmagenta}
 label-occupied-foreground = ${colors.darkmagenta}
 pin-workspaces = true
+format-underline=${colors.background}
 
 [module/alsa]
 type = internal/alsa
@@ -84,13 +90,13 @@ format-muted-foreground = ${colors.foreground}
 label-muted = vol: mute
 
 bar-volume-width = 11
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
-bar-volume-foreground-5 = #f5a70a
-bar-volume-foreground-6 = #ff5555
+bar-volume-foreground-0 = ${colors.cyan}
+bar-volume-foreground-1 = ${colors.cyan}
+bar-volume-foreground-2 = ${colors.cyan}
+bar-volume-foreground-3 = ${colors.yellow}
+bar-volume-foreground-4 = ${colors.yellow}
+bar-volume-foreground-5 = ${colors.magenta}
+bar-volume-foreground-6 = ${colors.magenta}
 bar-volume-gradient = false
 bar-volume-indicator = |
 bar-volume-indicator-font = 2
@@ -115,22 +121,12 @@ interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
 label-connected = %essid%
+format-connected-underline=${colors.cyan}
 
-format-disconnected =
+label-disconnected = Not connected
+format-disconnected-underline=${colors.magenta}
 
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
-ramp-signal-foreground = ${colors.foreground-alt}
-
-[module/spotify]
-type = custom/script
-interval = 1
-format-prefix = " "
-format = <label>
-exec = python ~/.local/bin/spotify_status.py -f '{artist}: {song}'
+ramp-signal-0 =
 
 [module/xbacklight]
 type = internal/xbacklight
