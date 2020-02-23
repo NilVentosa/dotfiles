@@ -61,7 +61,7 @@ let mapleader = " "
 
  "Syntax and color scheme
     syntax on
-    colorscheme dracula
+    colorscheme tucnak
 
 "NerdTree
 	"NerdTree toggle
