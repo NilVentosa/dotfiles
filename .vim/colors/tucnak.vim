@@ -1,5 +1,6 @@
 " Author: Nil Ventosa  <ventosa@gmail.com>
-" Maintainer: Nil Ventosa  <ventosa@gmail.com>
+"   github.com/nilventosa
+"   ventosa.io
 
 set background=dark
 highlight clear
@@ -10,21 +11,20 @@ endif
 " Colors
 let g:colors_name = "tucnak"
 
-let s:tucnak =              {}
-let s:tucnakFg =            '231'
-let s:tucnakBg =            '17'
-let s:tucnakCyan =          '81'
-let s:tucnakMagenta =       '197'
-let s:tucnakBlack =         '16'
-let s:tucnakDarkblue =      '17'
-let s:tucnakWhite =         '231'
-let s:tucnakYellow =        '226'
-let s:tucnakGrey =          '243'
-let s:none =                'none'
-let s:underline =           'underline'
-let s:underlinebold =       'underline,bold'
-
-
+let s:t =              {}
+let s:tFg =            '231'
+let s:tBg =            '17'
+let s:tCyan =          '81'
+let s:tMagenta =       '197'
+let s:tBlack =         '16'
+let s:tDarkblue =      '18'
+let s:tWhite =         '231'
+let s:tYellow =        '226'
+let s:tGrey =          '243'
+let s:none =           'none'
+let s:underline =      'underline'
+let s:underlinebold =  'underline,bold'
+let s:bold =           'bold'
 
 "----------------------------------------------------------------------------------------------------
 " General settings                                                                                   |
@@ -37,9 +37,9 @@ let s:underlinebold =       'underline,bold'
 " --------------------------------
 exe "hi! Normal"."          ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
 exe "hi! Cursor"."          ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
-exe "hi! CursorLine"."      ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
-exe "hi! LineNr"."          ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
-exe "hi! CursorLineNR"."    ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
+exe "hi! CursorLine"."      ctermfg=".s:none		    ." ctermbg=".s:tBlack	    ." cterm=".s:none		
+exe "hi! LineNr"."          ctermfg=".s:tGrey	        ." ctermbg=".s:none	        ." cterm=".s:none		
+exe "hi! CursorLineNR"."    ctermfg=".s:tWhite	        ." ctermbg=".s:none		    ." cterm=".s:none	
 " -----------------
 " - Number column -
 " -----------------
@@ -75,7 +75,7 @@ exe "hi! MoreMsg"."         ctermfg=".s:none		    ." ctermbg=".s:none		    ." ct
 " - Visual aid -
 " --------------
 exe "hi! MatchParen"."      ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
-exe "hi! Visual"."          ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
+exe "hi! Visual"."          ctermfg=".s:none		    ." ctermbg=".s:tDarkblue   ." cterm=".s:none		
 exe "hi! VisualNOS"."       ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
 exe "hi! NonText"."         ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
 exe "hi! Todo"."            ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
@@ -152,10 +152,24 @@ exe "hi! SpellRare"."       ctermfg=".s:none		    ." ctermbg=".s:none		    ." ct
 " Specific settings                                                 |
 "--------------------------------------------------------------------
 " Vim
-exe "hi! vimLineComment"."  ctermfg=".s:tucnakGrey
-exe "hi! vimCommentTitle"." ctermfg=".s:tucnakGrey
-exe "hi! vimString"."       ctermfg=".s:tucnakWhite
-exe "hi! vimVar"."          ctermfg=".s:tucnakCyan
-exe "hi! vimVar"."          ctermfg=".s:tucnakCyan
-exe "hi! vimCommand"."      ctermfg=".s:tucnakMagenta
-exe "hi! vimExecute"."      ctermfg=".s:tucnakMagenta
+exe "hi! vimLineComment"."  ctermfg=".s:tGrey
+exe "hi! vimCommentTitle"." ctermfg=".s:tGrey
+exe "hi! vimString"."       ctermfg=".s:tWhite
+exe "hi! vimVar"."          ctermfg=".s:tCyan
+exe "hi! vimVar"."          ctermfg=".s:tCyan
+exe "hi! vimCommand"."      ctermfg=".s:tMagenta
+exe "hi! vimExecute"."      ctermfg=".s:tMagenta
+" Ini
+exe "hi! dosiniHeader"."    ctermfg=".s:tMagenta
+exe "hi! dosinilabel"."     ctermfg=".s:tCyan
+exe "hi! dosiniValue"."     ctermfg=".s:tWhite
+" NerdTree
+exe "hi! NERDTreeDir"."      ctermfg=".s:tMagenta		    ." ctermbg=".s:none		    ." cterm=".s:bold
+exe "hi! NERDTreeDirSlash"." ctermfg=".s:tMagenta		    ." ctermbg=".s:none		    ." cterm=".s:bold
+exe "hi! NERDTreeHelpTitle"." ctermfg=".s:tMagenta		    ." ctermbg=".s:none		    ." cterm=".s:bold
+exe "hi! NERDTreeIgnore"."   ctermfg=".s:tMagenta		    ." ctermbg=".s:none		    ." cterm=".s:bold
+exe "hi! NERDTreeHelp"."     ctermfg=".s:tYellow 
+exe "hi! NERDTreeHelpKey"."  ctermfg=".s:tCyan
+exe "hi! NERDTreeCWD"."      ctermfg=".s:tCyan
+exe "hi! NERDTreeOpenable"." ctermfg=".s:tMagenta		    ." ctermbg=".s:none		    ." cterm=".s:bold
+exe "hi! NERDTreeClosable"." ctermfg=".s:tMagenta		    ." ctermbg=".s:none		    ." cterm=".s:bold
