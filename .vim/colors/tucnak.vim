@@ -13,7 +13,7 @@ let g:colors_name = "tucnak"
 
 let s:t =              {}
 let s:tFg =            '231'
-let s:tBg =            '17'
+let s:tBg =            '233'
 let s:tCyan =          '81'
 let s:tMagenta =       '197'
 let s:tBlack =         '16'
@@ -35,7 +35,7 @@ let s:bold =           'bold'
 " --------------------------------
 " Editor settings
 " --------------------------------
-exe "hi! Normal"."          ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
+exe "hi! Normal"."          ctermfg=".s:none		    ." ctermbg=".s:tBg	." cterm=".s:none		
 exe "hi! Cursor"."          ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
 exe "hi! CursorLine"."      ctermfg=".s:none		    ." ctermbg=".s:tBlack	    ." cterm=".s:none		
 exe "hi! LineNr"."          ctermfg=".s:tGrey	        ." ctermbg=".s:none	        ." cterm=".s:none		
@@ -88,14 +88,14 @@ exe "hi! SpecialKey"."      ctermfg=".s:none		    ." ctermbg=".s:none		    ." ct
 " --------------------------------
 " Variable types
 " --------------------------------
-exe "hi! Constant"."        ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
+exe "hi! Constant"."        ctermfg=".s:tCyan		    ." ctermbg=".s:none		    ." cterm=".s:none		
 exe "hi! String"."          ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
 exe "hi! StringDelimiter"." ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
 exe "hi! Character"."       ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
 exe "hi! Number"."          ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
 exe "hi! Boolean"."         ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
 exe "hi! Float"."           ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
-exe "hi! Identifier"."      ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
+exe "hi! Identifier"."      ctermfg=".s:tCyan		    ." ctermbg=".s:none		    ." cterm=".s:none		
 exe "hi! Function"."        ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
 " --------------------------------
 " Language constructs
@@ -107,7 +107,7 @@ exe "hi! Label"."           ctermfg=".s:none		    ." ctermbg=".s:none		    ." ct
 exe "hi! Operator"."        ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
 exe "hi! Keyword"."         ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
 exe "hi! Exception"."       ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
-exe "hi! Comment"."         ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
+exe "hi! Comment"."         ctermfg=".s:tGrey		    ." ctermbg=".s:none		    ." cterm=".s:none		
 exe "hi! Special"."         ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
 exe "hi! SpecialChar"."     ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
 exe "hi! Tag"."             ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
@@ -159,6 +159,8 @@ exe "hi! vimVar"."          ctermfg=".s:tCyan
 exe "hi! vimVar"."          ctermfg=".s:tCyan
 exe "hi! vimCommand"."      ctermfg=".s:tMagenta
 exe "hi! vimExecute"."      ctermfg=".s:tMagenta
+exe "hi! vimStringEnd"."      ctermfg=".s:tMagenta
+
 " Ini
 exe "hi! dosiniHeader"."    ctermfg=".s:tMagenta
 exe "hi! dosinilabel"."     ctermfg=".s:tCyan
@@ -173,3 +175,8 @@ exe "hi! NERDTreeHelpKey"."  ctermfg=".s:tCyan
 exe "hi! NERDTreeCWD"."      ctermfg=".s:tCyan
 exe "hi! NERDTreeOpenable"." ctermfg=".s:tMagenta		    ." ctermbg=".s:none		    ." cterm=".s:bold
 exe "hi! NERDTreeClosable"." ctermfg=".s:tMagenta		    ." ctermbg=".s:none		    ." cterm=".s:bold
+" Sh
+exe "hi! shSet"."           ctermfg=".s:tMagenta		    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! shSetOption"."     ctermfg=".s:tYellow	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! shStatement"."     ctermfg=".s:tMagenta	   	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! shQuote"."         ctermfg=".s:tMagenta	    	    ." ctermbg=".s:none		    ." cterm=".s:none
