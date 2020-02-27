@@ -17,7 +17,7 @@ let s:tBg =            '233'
 let s:tCyan =          '81'
 let s:tMagenta =       '197'
 let s:tBlack =         '16'
-let s:tDarkblue =      '18'
+let s:tDarkblue =      '17'
 let s:tWhite =         '231'
 let s:tYellow =        '226'
 let s:tGrey =          '243'
@@ -180,3 +180,19 @@ exe "hi! shSet"."           ctermfg=".s:tMagenta		    ." ctermbg=".s:none		    .
 exe "hi! shSetOption"."     ctermfg=".s:tYellow	    	    ." ctermbg=".s:none		    ." cterm=".s:none
 exe "hi! shStatement"."     ctermfg=".s:tMagenta	   	    ." ctermbg=".s:none		    ." cterm=".s:none
 exe "hi! shQuote"."         ctermfg=".s:tMagenta	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+" Markdown
+exe "hi! markdownH1"."         ctermfg=".s:tMagenta	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! markdownH1Delimiter"."         ctermfg=".s:tMagenta	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! markdownH2"."         ctermfg=".s:tMagenta	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! markdownH2Delimiter"."         ctermfg=".s:tMagenta	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! markdownH3"."         ctermfg=".s:tMagenta	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! markdownH3Delimiter"."         ctermfg=".s:tMagenta	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! markdownH4"."         ctermfg=".s:tMagenta	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! markdownH4Delimiter"."         ctermfg=".s:tMagenta	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! markdownListMarker"."         ctermfg=".s:tYellow	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! markdownBlockQuote"."         ctermfg=".s:tYellow	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! markdownCode"."         ctermfg=".s:tCyan	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! markdownUrl"."         ctermfg=".s:tCyan	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! markdownLinkText"."         ctermfg=".s:tCyan	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! markdownLinkTextDelimiter"."         ctermfg=".s:tMagenta	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! markdownLinkDelimiter"."         ctermfg=".s:tMagenta	    	    ." ctermbg=".s:none		    ." cterm=".s:none

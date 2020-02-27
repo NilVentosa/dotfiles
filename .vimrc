@@ -12,6 +12,7 @@ let mapleader = " "
     map <C-v> :tabnew ~/.vimrc<CR><CR>
     "Auto source vimrc after saving
     autocmd! bufwritepost ~/repos/dotfiles/.vimrc source ~/repos/dotfiles/.vimrc
+    autocmd! bufwritepost ~/.vimrc source ~/.vimrc
 
 "Copy pase
 	set pastetoggle=<F2>
