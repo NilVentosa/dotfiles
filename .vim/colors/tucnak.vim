@@ -12,8 +12,8 @@ endif
 let g:colors_name = "tucnak"
 
 let s:t =              {}
-let s:tFg =            '231'
-let s:tBg =            '233'
+let s:tFg =            '255'
+let s:tBg =            '234'
 let s:tCyan =          '81'
 let s:tMagenta =       '197'
 let s:tBlack =         '16'
@@ -178,5 +178,10 @@ exe "hi! NERDTreeClosable"." ctermfg=".s:tMagenta		    ." ctermbg=".s:none		    
 " Sh
 exe "hi! shSet"."           ctermfg=".s:tMagenta		    ." ctermbg=".s:none		    ." cterm=".s:none
 exe "hi! shSetOption"."     ctermfg=".s:tYellow	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! shOption"."        ctermfg=".s:tCyan	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! shDerefSimple"."        ctermfg=".s:tCyan	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! shTestOpr"."        ctermfg=".s:tCyan	    	    ." ctermbg=".s:none		    ." cterm=".s:none
 exe "hi! shStatement"."     ctermfg=".s:tMagenta	   	    ." ctermbg=".s:none		    ." cterm=".s:none
-exe "hi! shQuote"."         ctermfg=".s:tMagenta	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! shQuote"."         ctermfg=".s:tYellow	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! shCommandSubBQ"."  ctermfg=".s:tMagenta	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! shCommandb"."  ctermfg=".s:tMagenta	    	    ." ctermbg=".s:none		    ." cterm=".s:none
