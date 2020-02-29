@@ -5,8 +5,20 @@
 
 let mapleader = " "
 
-"This thing is needed apparently
+"This thing is needed apparently to tell vim it it not vi
 	set nocompatible
+
+ "Enable syntax and plugins
+    syntax enable
+    colorscheme tucnak
+	filetype plugin on
+
+" Find in subfolders
+    set path+=**
+
+" Display all matching files when tab complete
+    set wildmenu
+
 "vimrc stuff
     "Open vimrc in a new tab
     map <C-v> :tabnew ~/.vimrc<CR><CR>
@@ -48,7 +60,6 @@ let mapleader = " "
         Plug 'cespare/vim-toml'
 	call plug#end()
 
-	filetype plugin on
     let delimitMate_expand_cr = 1
 
 "Enable autocompletion
@@ -59,10 +70,6 @@ let mapleader = " "
 
 "Display highlights
 	set hlsearch
-
- "Syntax and color scheme
-    syntax on
-    colorscheme tucnak
 
 "NerdTree
 	"NerdTree toggle
