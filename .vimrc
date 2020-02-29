@@ -97,7 +97,10 @@ let mapleader = " "
     map L 5l
     map H 5h
 
-"Autohighlight
+"Tags
+   nnoremap <C-M> <C-]>
+
+"Autohighlight all instances of current word
     set updatetime=300
     function! HighlightWordUnderCursor()
         if getline(".")[col(".")-1] !~# '[[:punct:][:blank:]]' 
@@ -117,7 +120,7 @@ let mapleader = " "
 "Disable folding
     set nofoldenable
 
-"Highlight group
+"Display the highlight groups of the word under cursor
 nmap <leader>h :call SynStack()<CR>
 function! SynStack()
     if !exists('*synstack')

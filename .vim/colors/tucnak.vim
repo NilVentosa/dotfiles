@@ -50,11 +50,11 @@ exe "hi! Folded"."          ctermfg=".s:none		    ." ctermbg=".s:none		    ." ct
 " -------------------------
 " - Window/Tab delimiters - 
 " -------------------------
-exe "hi! VertSplit"."       ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
+exe "hi! VertSplit"."       ctermfg=".s:tGrey		    ." ctermbg=".s:tGrey		    ." cterm=".s:none		
 exe "hi! ColorColumn"."     ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
 exe "hi! TabLine"."         ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
-exe "hi! TabLineFill"."     ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
-exe "hi! TabLineSel"."      ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
+exe "hi! TabLineFill"."     ctermfg=".s:none	         ." ctermbg=".s:none		    ." cterm=".s:none		
+exe "hi! TabLineSel"."      ctermfg=".s:tBlack		    ." ctermbg=".s:tCyan		    ." cterm=".s:none		
 " -------------------------------
 " - File Navigation / Searching -
 " -------------------------------
@@ -75,7 +75,7 @@ exe "hi! MoreMsg"."         ctermfg=".s:none		    ." ctermbg=".s:none		    ." ct
 " - Visual aid -
 " --------------
 exe "hi! MatchParen"."      ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
-exe "hi! Visual"."          ctermfg=".s:none		    ." ctermbg=".s:tDarkblue   ." cterm=".s:none		
+exe "hi! Visual"."          ctermfg=".s:none		    ." ctermbg=".s:tBlack   ." cterm=".s:none		
 exe "hi! VisualNOS"."       ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
 exe "hi! NonText"."         ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
 exe "hi! Todo"."            ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
