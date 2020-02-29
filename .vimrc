@@ -105,7 +105,8 @@ let mapleader = " "
     map H 5h
 
 "Tags
-   nnoremap <C-M> <C-]>
+    nnoremap <leader>t :!ctags -R .<CR><CR>
+    nnoremap <C-M> <C-]>
 
 "Autohighlight all instances of current word
     set updatetime=300
