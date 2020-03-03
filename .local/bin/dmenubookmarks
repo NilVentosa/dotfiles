@@ -7,7 +7,7 @@ bookmarksFile=~/.local/lists/bookmarks # File with the bookmarks
 
 bookmark=$(sort $bookmarksFile | awk -F "," '{print $1}' | dmenu -fn Monospace-15)
 
-url=$(grep -m 1 $bookmark $bookmarksFile | awk -F "," '{print $2}')
+url=$(grep -m 1 $bookmark, $bookmarksFile | awk -F "," '{print $2}')
 
 if [ $url == ''] || [ $BROWSER == '' ]; then
     exit 1

@@ -7,3 +7,4 @@ alias ls='ls --color=auto'
 export BIN=~/.local/bin
 export PS1="\[\033[38;5;11m\][\[$(tput sgr0)\]\[\033[38;5;13m\]\u@\h\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;5;14m\]\W\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;11m\]]\[$(tput sgr0)\]\[\033[38;5;15m\]\\$ \[$(tput sgr0)\]"
 alias colors=$BIN/colors
+set -o vi
