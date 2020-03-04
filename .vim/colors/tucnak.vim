@@ -90,7 +90,7 @@ exe "hi! SpecialKey"."      ctermfg=".s:none		    ." ctermbg=".s:none		    ." ct
 " --------------------------------
 exe "hi! Constant"."        ctermfg=".s:tCyan		    ." ctermbg=".s:none		    ." cterm=".s:none		
 exe "hi! String"."          ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
-exe "hi! StringDelimiter"." ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
+exe "hi! SnringDelimiter"." ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
 exe "hi! Character"."       ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
 exe "hi! Number"."          ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
 exe "hi! Boolean"."         ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
@@ -185,6 +185,7 @@ exe "hi! shStatement"."     ctermfg=".s:tMagenta	   	    ." ctermbg=".s:none		  
 exe "hi! shQuote"."         ctermfg=".s:tYellow	    	    ." ctermbg=".s:none		    ." cterm=".s:none
 exe "hi! shCommandSubBQ"."  ctermfg=".s:tMagenta	    	    ." ctermbg=".s:none		    ." cterm=".s:none
 exe "hi! shCommandb"."  ctermfg=".s:tMagenta	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! shFunction"."  ctermfg=".s:tYellow	    	    ." ctermbg=".s:none		    ." cterm=".s:none
 " Markdown
 exe "hi! markdownH1"."         ctermfg=".s:tMagenta	    	    ." ctermbg=".s:none		    ." cterm=".s:none
 exe "hi! markdownH1Delimiter"."         ctermfg=".s:tMagenta	    	    ." ctermbg=".s:none		    ." cterm=".s:none
@@ -201,3 +202,14 @@ exe "hi! markdownUrl"."         ctermfg=".s:tCyan	    	    ." ctermbg=".s:none		
 exe "hi! markdownLinkText"."         ctermfg=".s:tCyan	    	    ." ctermbg=".s:none		    ." cterm=".s:none
 exe "hi! markdownLinkTextDelimiter"."         ctermfg=".s:tMagenta	    	    ." ctermbg=".s:none		    ." cterm=".s:none
 exe "hi! markdownLinkDelimiter"."         ctermfg=".s:tMagenta	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+" Python
+exe "hi! pythonInclude"."         ctermfg=".s:tYellow	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! pythonString"."         ctermfg=".s:tCyan	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! pythonQuotes"."         ctermfg=".s:tCyan	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! pythonFunction"."         ctermfg=".s:tMagenta	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! pythonBuiltin"."         ctermfg=".s:tMagenta	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! pythonConditional"."         ctermfg=".s:tMagenta	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! pythonOperator"."         ctermfg=".s:tMagenta	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! pythonStatement"."         ctermfg=".s:tYellow	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! pythonNumber"."         ctermfg=".s:tMagenta	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! pythonRepeat"."         ctermfg=".s:tMagenta	    	    ." ctermbg=".s:none		    ." cterm=".s:none
