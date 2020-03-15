@@ -97,6 +97,8 @@ let mapleader = " "
         map <leader>c :w <CR> :!gcc % -o compiled/%< && clear && ./compiled/%< <CR>
 	"Save and run python
         map <leader>p :w <CR> :!python % <CR>
+    "Compile md and open in surf
+        map <leader>m :w <CR> :!pandoc -o thing.html % <CR> :!surf -f thing.html <CR><CR> :!rm thing.html <CR><CR>
 
 "Faster movement
     map J 5j
