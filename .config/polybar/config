@@ -98,7 +98,7 @@ label-focused-background = ${colors.darkmagenta}
 label-occupied-foreground = ${colors.darkmagenta}
 pin-workspaces = true
 format-underline=${colors.background}
-
+label-monitor=%name%
 [module/alsa]
 type = internal/alsa
 

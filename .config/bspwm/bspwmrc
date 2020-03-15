@@ -1,21 +1,22 @@
 #! /bin/sh
 # If refreshing bspwm, remove all previous rules to prevent doubling up.
 bspc rule -r "*"
+killall -q polybar
 
 
 intern=eDP1
 extern=HDMI2
 
 if xrandr | grep "$extern disconnected"; then
-    xrandr --output "$extern" --off --output "$intern" --auto
-    bspc monitor $intern -d 1 2 3 4 5 6 7 8 9
-    bspc desktop -f 0
+    xrandr --output "$extern" --off --output "$intern" --mode "2560x1600"
+    bspc monitor $intern -d 1 2 3 4 5 6 7 8 9 0
     polybar internal &
+    xwallpaper --zoom ~/.local/wallpapers/wallpaper.jpg
 else
     xrandr --output "$intern" --off --output "$extern" --mode "2560x1080"
-    bspc monitor $extern -d 1 2 3 4 5 6 7 8 9 
-    bspc desktop -f 0
+    bspc monitor $extern -d 2 3 4 5 6 7 8 9 0
     polybar external &
+    xwallpaper --zoom ~/.local/wallpapers/wallpaper.jpg
 fi  
 
 
