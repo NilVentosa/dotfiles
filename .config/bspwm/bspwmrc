@@ -8,7 +8,7 @@ intern=eDP1
 extern=HDMI2
 
 if xrandr | grep "$extern disconnected"; then
-    xrandr --output "$extern" --off --output "$intern" --mode "2560x1600"
+    xrandr --output "$extern" --off --output "$intern" --mode "1920x1200"
     bspc monitor $intern -d 1 2 3 4 5 6 7 8 9 0
     polybar internal &
     xwallpaper --zoom ~/.local/wallpapers/wallpaper.jpg

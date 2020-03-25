@@ -54,10 +54,10 @@ let mapleader = " "
 		Plug 'msanders/snipmate.vim'
 		Plug 'scrooloose/nerdtree'
 		Plug 'tomtom/tcomment_vim'
-		Plug 'pangloss/vim-javascript'
         Plug 'dracula/vim', { 'as': 'dracula' }
 		Plug 'Raimondi/delimitMate'
         Plug 'cespare/vim-toml'
+        Plug 'vim-airline/vim-airline'
 	call plug#end()
 
     let delimitMate_expand_cr = 1
@@ -95,6 +95,8 @@ let mapleader = " "
 "Compile
 	"Compile and run C
         map <leader>c :w <CR> :!gcc % -o compiled/%< && clear && ./compiled/%< <CR>
+	"Compile and run Java
+        map <leader>j :w <CR> :!javac %  && clear && java %:r <CR>
 	"Save and run python
         map <leader>p :w <CR> :!python % <CR>
     "Compile md and open in surf

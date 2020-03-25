@@ -1,8 +1,12 @@
+ara,ara.cat
 archwiki,wiki.archlinux.org
+berkeley,https://people.eecs.berkeley.edu/~jrs/61b/
 bitwarden,bitwarden.com
 biwenger,biwenger.as.com
 blog,blog.ventosa.io
 brilliant,brilliant.org
+chess,chess.com
+colors,calmar.ws/vim/256-xterm-24bit-rgb-color-chart.html
 duolingo,duolingo.com
 github,github.com/nilventosa
 gmail,gmail.com
@@ -11,10 +15,8 @@ keep,keep.google.com
 maps,maps.google.com
 rodalies,rodalies.gencat.cat/ca/horaris/
 strava,https://www.strava.com/dashboard
-teoflix,animenyan.ga
 trackseries,trackseries.tv
+typing, typing.com
 ventosa,ventosa.io
 vimcasts,vimcasts.org
 youtube,youtube.com/feed/subscriptions
-colors,calmar.ws/vim/256-xterm-24bit-rgb-color-chart.html
-chess,chess.com

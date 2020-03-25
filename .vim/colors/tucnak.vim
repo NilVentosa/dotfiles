@@ -213,3 +213,25 @@ exe "hi! pythonOperator"."         ctermfg=".s:tMagenta	    	    ." ctermbg=".s:
 exe "hi! pythonStatement"."         ctermfg=".s:tYellow	    	    ." ctermbg=".s:none		    ." cterm=".s:none
 exe "hi! pythonNumber"."         ctermfg=".s:tMagenta	    	    ." ctermbg=".s:none		    ." cterm=".s:none
 exe "hi! pythonRepeat"."         ctermfg=".s:tMagenta	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+" Java
+exe "hi! javaExternal"."         ctermfg=".s:tYellow	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! javaScopeDecl"."         ctermfg=".s:tMagenta	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! javaClassDecl"."         ctermfg=".s:tYellow	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! javaStorageClass"."         ctermfg=".s:tMagenta	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! javaRepeat"."         ctermfg=".s:tMagenta	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! javaBranch"."         ctermfg=".s:tMagenta	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! javaStatement"."         ctermfg=".s:tMagenta	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! javaType"."         ctermfg=".s:tCyan	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! javaString"."         ctermfg=".s:tCyan	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! javaParen"."         ctermfg=".s:tWhite	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! javaBoolean"."         ctermfg=".s:tYellow	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! javaNumber"."         ctermfg=".s:tYellow	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! javaOperator"."         ctermfg=".s:tYellow	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! javaTypedef"."         ctermfg=".s:tYellow	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! javaConditional"."         ctermfg=".s:tYellow	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! javaLineComment"."         ctermfg=".s:tGrey	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! javaDocComment"."         ctermfg=".s:tGrey	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! javaCommentTitle"."         ctermfg=".s:tGrey	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! javaDocTags"."         ctermfg=".s:tGrey	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! javaDocParam"."         ctermfg=".s:tGrey	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+
