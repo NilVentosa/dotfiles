@@ -1,1 +1,6 @@
 tags
+.local/bin/pipenv
+.local/bin/pipenv-resolver
+.local/bin/virtualenv
+.local/bin/virtualenv-clone
+
