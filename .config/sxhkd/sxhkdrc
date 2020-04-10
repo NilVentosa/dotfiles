@@ -152,7 +152,9 @@ XF86MonBrightnessDown
 
 # keyboard brightness
 XF86KbdBrightnessUp
+    brightnessctl --device='smc\:\:kbd_backlight' set +30
 XF86KbdBrightnessDown
+    brightnessctl --device='smc\:\:kbd_backlight' set 30-
 
 # launcher keys
 XF86LaunchA
