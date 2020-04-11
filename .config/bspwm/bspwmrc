@@ -29,6 +29,4 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 bspc config focus_follows_pointer true
 
-bspc rule -a WhatsApp desktop=^0
-#bspc rule -a Surf state=tiled
-
+initialstate &
