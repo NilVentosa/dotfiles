@@ -223,15 +223,25 @@ exe "hi! javaBranch"."         ctermfg=".s:tMagenta	    	    ." ctermbg=".s:none
 exe "hi! javaStatement"."         ctermfg=".s:tMagenta	    	    ." ctermbg=".s:none		    ." cterm=".s:none
 exe "hi! javaType"."         ctermfg=".s:tCyan	    	    ." ctermbg=".s:none		    ." cterm=".s:none
 exe "hi! javaString"."         ctermfg=".s:tCyan	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! javaParenT"."         ctermfg=".s:tCyan	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! javaFold"."         ctermfg=".s:tCyan	    	    ." ctermbg=".s:none		    ." cterm=".s:none
 exe "hi! javaParen"."         ctermfg=".s:tWhite	    	    ." ctermbg=".s:none		    ." cterm=".s:none
 exe "hi! javaBoolean"."         ctermfg=".s:tYellow	    	    ." ctermbg=".s:none		    ." cterm=".s:none
 exe "hi! javaNumber"."         ctermfg=".s:tYellow	    	    ." ctermbg=".s:none		    ." cterm=".s:none
 exe "hi! javaOperator"."         ctermfg=".s:tYellow	    	    ." ctermbg=".s:none		    ." cterm=".s:none
 exe "hi! javaTypedef"."         ctermfg=".s:tYellow	    	    ." ctermbg=".s:none		    ." cterm=".s:none
 exe "hi! javaConditional"."         ctermfg=".s:tYellow	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! javaAnnotation"."         ctermfg=".s:tYellow	    	    ." ctermbg=".s:none		    ." cterm=".s:bold
 exe "hi! javaLineComment"."         ctermfg=".s:tGrey	    	    ." ctermbg=".s:none		    ." cterm=".s:none
 exe "hi! javaDocComment"."         ctermfg=".s:tGrey	    	    ." ctermbg=".s:none		    ." cterm=".s:none
 exe "hi! javaCommentTitle"."         ctermfg=".s:tGrey	    	    ." ctermbg=".s:none		    ." cterm=".s:none
 exe "hi! javaDocTags"."         ctermfg=".s:tGrey	    	    ." ctermbg=".s:none		    ." cterm=".s:none
 exe "hi! javaDocParam"."         ctermfg=".s:tGrey	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+" Xml
+exe "hi! xmlTag"."         ctermfg=".s:tMagenta	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! xmlAttrib"."         ctermfg=".s:tYellow	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! xmlAttribPunct"."         ctermfg=".s:tYellow	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! xmlEqual"."         ctermfg=".s:tYellow	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! xmlTagName"."         ctermfg=".s:tMagenta	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! xmlString"."         ctermfg=".s:tCyan	    	    ." ctermbg=".s:none		    ." cterm=".s:none
 
