@@ -14,13 +14,14 @@ let g:colors_name = "tucnak"
 let s:t =              {}
 let s:tFg =            '255'
 let s:tBg =            '234'
-let s:tCyan =          '81'
-let s:tMagenta =       '197'
+let s:tCyan =          '117'
+let s:tMagenta =       '161'
 let s:tBlack =         '16'
 let s:tDarkblue =      '17'
 let s:tWhite =         '231'
-let s:tYellow =        '226'
+let s:tYellow =        '227'
 let s:tGrey =          '243'
+let s:tDarkGrey =      '236'
 let s:none =           'none'
 let s:underline =      'underline'
 let s:underlinebold =  'underline,bold'
@@ -54,7 +55,7 @@ exe "hi! VertSplit"."       ctermfg=".s:tGrey		    ." ctermbg=".s:tGrey		    ." 
 exe "hi! ColorColumn"."     ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
 exe "hi! TabLine"."         ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
 exe "hi! TabLineFill"."     ctermfg=".s:none	         ." ctermbg=".s:none		    ." cterm=".s:none		
-exe "hi! TabLineSel"."      ctermfg=".s:tBlack		    ." ctermbg=".s:tCyan		    ." cterm=".s:none		
+exe "hi! TabLineSel"."      ctermfg=".s:tCyan		    ." ctermbg=".s:none		    ." cterm=".s:bold		
 " -------------------------------
 " - File Navigation / Searching -
 " -------------------------------
@@ -64,8 +65,6 @@ exe "hi! IncSearch"."       ctermfg=".s:none		    ." ctermbg=".s:none		    ." ct
 " -----------------
 " - Prompt/Status -
 " -----------------
-exe "hi! StatusLine"."      ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
-exe "hi! StatusLineNC"."    ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
 exe "hi! WildMenu"."        ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
 exe "hi! Question"."        ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
 exe "hi! Title"."           ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
@@ -160,6 +159,12 @@ exe "hi! vimVar"."          ctermfg=".s:tCyan
 exe "hi! vimCommand"."      ctermfg=".s:tMagenta
 exe "hi! vimExecute"."      ctermfg=".s:tMagenta
 exe "hi! vimStringEnd"."      ctermfg=".s:tMagenta
+exe "hi! vimIsCommand"."      ctermfg=".s:tMagenta
+exe "hi! StatusLine"."     ctermfg=".s:tBlack    	    ." ctermbg=".s:tCyan		    ." cterm=".s:bold
+exe "hi! StatusLineNC"."     ctermfg=".s:tBlack    	    ." ctermbg=".s:tGrey		    ." cterm=".s:none
+exe "hi! StatusLineMagenta"."     ctermfg=".s:tBlack    	    ." ctermbg=".s:tMagenta		    ." cterm=".s:bold
+exe "hi! StatusLineCyan"."     ctermfg=".s:tBlack    	    ." ctermbg=".s:tCyan		    ." cterm=".s:bold
+exe "hi! StatusLineYellow"."     ctermfg=".s:tBlack    	    ." ctermbg=".s:tYellow		    ." cterm=".s:bold
 
 " Ini
 exe "hi! dosiniHeader"."    ctermfg=".s:tMagenta
