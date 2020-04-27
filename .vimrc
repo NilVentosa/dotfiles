@@ -51,13 +51,10 @@ let mapleader = " "
 		autocmd VimEnter * PlugInstall
 	endif 
 	call plug#begin()
-		Plug 'msanders/snipmate.vim'
 		Plug 'scrooloose/nerdtree'
 		Plug 'tomtom/tcomment_vim'
-        Plug 'dracula/vim', { 'as': 'dracula' }
 		Plug 'Raimondi/delimitMate'
-        Plug 'cespare/vim-toml'
-        Plug 'vim-airline/vim-airline'
+    Plug 'cespare/vim-toml'
 	call plug#end()
 
     let delimitMate_expand_cr = 1
