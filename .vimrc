@@ -21,7 +21,7 @@ let mapleader = " "
 
 "vimrc stuff
     "Open vimrc in a new tab
-    map <C-v> :tabnew ~/.vimrc<CR><CR>
+    " map <C-v> :tabnew ~/.vimrc<CR><CR>
     "Auto source vimrc after saving
     autocmd! bufwritepost ~/repos/dotfiles/.vimrc source ~/repos/dotfiles/.vimrc
     autocmd! bufwritepost ~/.vimrc source ~/.vimrc
@@ -69,10 +69,9 @@ let mapleader = " "
 	set hlsearch
 
 "NerdTree
-	"NerdTree toggle
 	map <C-n> :NERDTreeToggle<CR>
-    "Size
-    let g:NERDTreeWinSize=40
+  let g:NERDTreeWinSize=40
+  let NERDTreeQuitOnOpen=1
 
 "Splits
     "Splits open bottom right
@@ -84,6 +83,12 @@ let mapleader = " "
         map <C-j> <C-w>j
         map <C-k> <C-w>k
         map <C-l> <C-w>l
+
+      " Splits resizeing
+        noremap <Up> <C-w>+
+        noremap <Down> <C-w>-
+        noremap <Left> <C-w><
+        noremap <Right> <C-w>>
 
 "Tabs
     "Move to next tab

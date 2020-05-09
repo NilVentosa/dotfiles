@@ -220,6 +220,7 @@ exe "hi! pythonNumber"."         ctermfg=".s:tMagenta	    	    ." ctermbg=".s:no
 exe "hi! pythonRepeat"."         ctermfg=".s:tMagenta	    	    ." ctermbg=".s:none		    ." cterm=".s:none
 " Java
 exe "hi! javaExternal"."         ctermfg=".s:tYellow	    	    ." ctermbg=".s:none		    ." cterm=".s:none
+exe "hi! javaExceptions"."         ctermfg=".s:tYellow	    	    ." ctermbg=".s:none		    ." cterm=".s:none
 exe "hi! javaScopeDecl"."         ctermfg=".s:tMagenta	    	    ." ctermbg=".s:none		    ." cterm=".s:none
 exe "hi! javaClassDecl"."         ctermfg=".s:tYellow	    	    ." ctermbg=".s:none		    ." cterm=".s:none
 exe "hi! javaStorageClass"."         ctermfg=".s:tMagenta	    	    ." ctermbg=".s:none		    ." cterm=".s:none
