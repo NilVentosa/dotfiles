@@ -1,0 +1,7 @@
+execute "vsp"
+execute "bot 5sp"
+execute "terminal"
+execute "tabnew"
+execute "terminal"
+execute "vsp term://bash"
+execute "tabnext"

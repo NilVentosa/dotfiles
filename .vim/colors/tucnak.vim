@@ -52,7 +52,7 @@ exe "hi! Folded"."          ctermfg=".s:none		    ." ctermbg=".s:none		    ." ct
 " - Window/Tab delimiters - 
 " -------------------------
 exe "hi! VertSplit"."       ctermfg=".s:tGrey		    ." ctermbg=".s:tGrey		    ." cterm=".s:none		
-exe "hi! ColorColumn"."     ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
+exe "hi! ColorColumn"."     ctermfg=".s:none		    ." ctermbg=".s:tGrey		    ." cterm=".s:none		
 exe "hi! TabLine"."         ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
 exe "hi! TabLineFill"."     ctermfg=".s:none	         ." ctermbg=".s:none		    ." cterm=".s:none		
 exe "hi! TabLineSel"."      ctermfg=".s:tCyan		    ." ctermbg=".s:none		    ." cterm=".s:bold		

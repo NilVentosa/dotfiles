@@ -10,8 +10,11 @@ let mapleader = " "
 
  "Enable syntax and plugins
     syntax enable
+    filetype plugin on
+
+ " Colorscheme thing
     colorscheme tucnak
-	filetype plugin on
+    let &colorcolumn=join(range(104,999),',')
 
 " Find in subfolders
     set path+=**
@@ -51,13 +54,13 @@ let mapleader = " "
 		autocmd VimEnter * PlugInstall
 	endif 
 	call plug#begin()
-		Plug 'scrooloose/nerdtree'
-		Plug 'tomtom/tcomment_vim'
-		Plug 'Raimondi/delimitMate'
-    Plug 'cespare/vim-toml'
+      Plug 'scrooloose/nerdtree'
+      Plug 'tomtom/tcomment_vim'
+      Plug 'Raimondi/delimitMate'
+      Plug 'cespare/vim-toml'
 	call plug#end()
 
-    let delimitMate_expand_cr = 1
+  let delimitMate_expand_cr = 1
 
 "Enable autocompletion
 	set wildmode=longest,list,full
@@ -102,7 +105,8 @@ let mapleader = " "
 	"Save and run python
         map <leader>p :w <CR> :!python % <CR>
     "Compile md and open in surf
-        map <leader>m :w <CR> :!pandoc -o thing.html % <CR> :!surf -f thing.html <CR><CR> :!rm thing.html <CR><CR>
+        map <leader>m :w <CR> :!pandoc -o thing.html % <CR> 
+          \ :!surf -f thing.html <CR><CR> :!rm thing.html <CR><CR>
 
 "Faster movement
     map J 5j
@@ -146,92 +150,32 @@ endfunc
 "Java maps
     "ab sout System.out.prinln();<esc>hi
 
-" Status Bar
-  " Define all the different modes
-  let g:currentmode={
-    \ 'n'  : 'Normal',
-    \ 'no' : 'N·Operator Pending',
-    \ 'v'  : 'Visual',
-    \ 'V'  : 'V·Line',
-    \ '' : 'V·Block',
-    \ 's'  : 'Select',
-    \ 'S'  : 'S·Line',
-    \ '' : 'S·Block',
-    \ 'i'  : 'Insert',
-    \ 'R'  : 'Replace',
-    \ 'Rv' : 'V·Replace',
-    \ 'c'  : 'Command',
-    \ 'cv' : 'Vim Ex',
-    \ 'ce' : 'Ex',
-    \ 'r'  : 'Prompt',
-    \ 'rm' : 'More',
-    \ 'r?' : 'Confirm',
-    \ '!'  : 'Shell',
-    \}
-  " Functions
-  function! ModeCurrent() abort
-    let l:modecurrent = mode()
-    let l:modelist = toupper(get(g:currentmode, l:modecurrent, 'V·Block '))
-    let l:current_status_mode = l:modelist
-    return l:current_status_mode
-  endfunction
+" Status bar
+  source ~/.vim/scripts/statusbar.vim
 
-  function! GitBranch()
-    return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
-  endfunction
+  " NVim specifics
+  if has('nvim')
+    " Terminal mode mappings
+      " Move between splits
+      tnoremap <A-h> <C-\><C-N><C-w>h
+      tnoremap <A-j> <C-\><C-N><C-w>j
+      tnoremap <A-k> <C-\><C-N><C-w>k
+      tnoremap <A-l> <C-\><C-N><C-w>l
 
-  function! FileType(file)
-    if a:file == ''
-      return '-'
-    else
-      return tolower(a:file)
-    endif
-  endfunction
+      " ESC key bindings
+      tnoremap <Esc> <C-\><C-n>
+      tnoremap <M-[> <Esc>
+      tnoremap <C-v><Esc> <Esc>
+      
+      " No line numbers for terminal buffers
+      au TermOpen * setlocal listchars= nonumber norelativenumber
+      au TermOpen * setlocal laststatus=0
 
-  function! ActiveLine()
-    let statusline = ""
-    let statusline.='%#StatusLine#'
-    " Current mode
-    let statusline.='%#StatusLineCyan# %{ModeCurrent()} '
-    let statusline.='%#StatusLine#'
-    " Current git branch
-    let statusline.='%#StatusLineYellow# %{GitBranch()} '
-    let statusline.='%#StatusLine#'
-    "Right
-    let statusline.='%='
-    " File name
-    let statusline.='%#StatusLineCyan# %f '
-    let statusline.='%#StatusLine#'
-    " Current file type
-    let statusline.='%#StatusLineMagenta# .%{FileType(&filetype)} '
-    let statusline.='%#StatusLine#'
-    " Current line and column
-    let statusline.='%#StatusLineCyan# Ln %l, Col %c '
-    let statusline.='%#StatusLine#'
-    return statusline
-  endfunction
+      " Mouse support
+      set mouse=a
 
-  function! InactiveLine()
-    let statusline = ""
-    " File name
-    let statusline.='%#StatusLineNC# %f '
-    let statusline.='%#StatusLineNC#'
-    return statusline
-  endfunction
+      " Interactive find and replace
+      set inccommand=nosplit
+      nnoremap <Leader>k :%s/\<<C-r><C-w>\>//gc<Left><Left><Left>
 
-  function! NERDLine()
-    let statusline = ""
-    let statusline.='%#StatusLineYellow#'
-    let statusline.='NERDTree'
-    " File name
-    return statusline
-  endfunction
-
-  " Bar
-  augroup Statusline
-    autocmd!
-    autocmd WinEnter,BufEnter * setlocal statusline=%!ActiveLine()
-    autocmd WinLeave,BufLeave * setlocal statusline=%!InactiveLine()
-    autocmd FileType nerdtree setlocal statusline=%!NERDLine()
-  augroup END
-  set laststatus=2
+  endif

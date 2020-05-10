@@ -1,6 +1,6 @@
 export XDG_CONFIG_HOME="$HOME/.config"
 export BROWSER=firefox
-export EDITOR=vim
+export EDITOR=nvim
 export TERMINAL=st
 export JAVA_HOME="/usr/java/jdk-14.0.1"
 export MVN_HOME="/opt/maven"
