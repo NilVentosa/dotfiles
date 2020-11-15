@@ -14,7 +14,7 @@ let mapleader = " "
 
  " Colorscheme thing
     colorscheme tucnak
-    let &colorcolumn=join(range(104,999),',')
+    "let &colorcolumn=join(range(104,105),',')
 
 " Find in subfolders
     set path+=**

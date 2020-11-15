@@ -1,0 +1,6 @@
+ connect wifi: device wifi connect NetworkName password password
+
+Time:
+  'sudo hwclock --show' shows current time on the hardware clock
+  'sudo timedatectl set-time "YYYY-MM-DD HH:mm:ss"' sets system clock
+  'sudo hwclock --systohc' sets hardware clock to system clock 
