@@ -104,9 +104,11 @@ let mapleader = " "
         map <leader>j :w <CR> :!javac %  && clear && java %:r <CR>
 	"Save and run python
         map <leader>p :w <CR> :!python % <CR>
-    "Compile md and open in surf
-        map <leader>m :w <CR> :!pandoc -o thing.html % <CR> 
-          \ :!surf -f thing.html <CR><CR> :!rm thing.html <CR><CR>
+	"Save and run sh
+        map <leader>s :w <CR> :!%:p <CR>
+  "Compile md and open in surf
+      map <leader>m :w <CR> :!pandoc -o thing.html % <CR> 
+        \ :!surf -f thing.html <CR><CR> :!rm thing.html <CR><CR>
 
 "Faster movement
     map J 5j
