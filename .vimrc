@@ -180,4 +180,7 @@ endfunc
       set inccommand=nosplit
       nnoremap <Leader>k :%s/\<<C-r><C-w>\>//gc<Left><Left><Left>
 
+      " Vim uses system clipboard
+      set clipboard=unnamedplus
+
   endif

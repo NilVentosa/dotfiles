@@ -1,5 +1,3 @@
- connect wifi: device wifi connect NetworkName password password
-
 Time:
   'sudo hwclock --show' shows current time on the hardware clock
   'sudo timedatectl set-time "YYYY-MM-DD HH:mm:ss"' sets system clock
@@ -7,3 +5,18 @@ Time:
 
 Columns like table:
   'column -t'
+
+Wifi:
+  sudo systemctl enable NetworkManager.service
+  sudo systemctl disable dhcpcd.service
+  sudo systemctl disable dhcpcd@.service
+  sudo systemctl stop dhcpcd.service
+  sudo systemctl stop dhcpcd@.service
+  sudo systemctl enable wpa_supplicant.service
+  gpasswd -a USERNAME network
+  ip link set down eth0
+  ip link set down wlan0
+  sudo systemctl start wpa_supplicant.service
+  sudo systemctl start NetworkManager.service
+  systemctl reboot
+    
