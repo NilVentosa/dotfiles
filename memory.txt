@@ -19,4 +19,7 @@ Wifi:
   sudo systemctl start wpa_supplicant.service
   sudo systemctl start NetworkManager.service
   systemctl reboot
-    
+
+
+Set NVIM as a GO IDE
+    https://octetz.com/docs/2019/2019-04-24-vim-as-a-go-ide/

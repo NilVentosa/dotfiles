@@ -11,21 +11,23 @@ endif
 " Colors
 let g:colors_name = "tucnak"
 
-let  s:t              =  {}
-let  s:tFg            =  '255'
-let  s:tBg            =  '234'
-let  s:tCyan          =  '117'
-let  s:tMagenta       =  '161'
-let  s:tBlack         =  '16'
-let  s:tDarkblue      =  '17'
-let  s:tWhite         =  '231'
-let  s:tYellow        =  '227'
-let  s:tGrey          =  '243'
-let  s:tDarkGrey      =  '236'
-let  s:none           =  'none'
-let  s:underline      =  'underline'
-let  s:underlinebold  =  'underline,bold'
-let  s:bold           =  'bold'
+let s:t =              {}
+let s:tFg =            '255'
+let s:tBg =            '234'
+let s:tCyan =          '117'
+let s:tMagenta =       '161'
+let s:tBlack =         '16'
+let s:tDarkblue =      '17'
+let s:tWhite =         '231'
+let s:tYellow =        '227'
+let s:tGrey =          '243'
+let s:tDarkGrey =      '236'
+let s:none =           'none'
+let s:underline =      'underline'
+let s:underlinebold =  'underline,bold'
+let s:bold =           'bold'
+let s:italic =         'italic'
+
 "----------------------------------------------------------------------------------------------------
 " General settings                                                                                   |
 "----------------------------------------------------------------------------------------------------
@@ -72,17 +74,17 @@ exe "hi! MoreMsg"."         ctermfg=".s:none		    ." ctermbg=".s:none		    ." ct
 " --------------
 " - Visual aid -
 " --------------
-exe  "hi!  MatchParen"."  ctermfg=".s:none  ."  ctermbg=".s:none    ."  cterm=".s:none
-exe  "hi!  Visual"."      ctermfg=".s:none  ."  ctermbg=".s:tBlack  ."  cterm=".s:none
-exe  "hi!  VisualNOS"."   ctermfg=".s:none  ."  ctermbg=".s:none    ."  cterm=".s:none
-exe  "hi!  NonText"."     ctermfg=".s:none  ."  ctermbg=".s:none    ."  cterm=".s:none
-exe  "hi!  Todo"."        ctermfg=".s:none  ."  ctermbg=".s:none    ."  cterm=".s:none
-exe  "hi!  Underlined"."  ctermfg=".s:none  ."  ctermbg=".s:none    ."  cterm=".s:none
-exe  "hi!  Error"."       ctermfg=".s:none  ."  ctermbg=".s:none    ."  cterm=".s:none
-exe  "hi!  ErrorMsg"."    ctermfg=".s:none  ."  ctermbg=".s:none    ."  cterm=".s:none
-exe  "hi!  WarningMsg"."  ctermfg=".s:none  ."  ctermbg=".s:none    ."  cterm=".s:none
-exe  "hi!  Ignore"."      ctermfg=".s:none  ."  ctermbg=".s:none    ."  cterm=".s:none
-exe  "hi!  SpecialKey"."  ctermfg=".s:none  ."  ctermbg=".s:none    ."  cterm=".s:none
+exe "hi! MatchParen"."      ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
+exe "hi! Visual"."          ctermfg=".s:none		    ." ctermbg=".s:tBlack   ." cterm=".s:none		
+exe "hi! VisualNOS"."       ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
+exe "hi! NonText"."         ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
+exe "hi! Todo"."            ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
+exe "hi! Underlined"."      ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
+exe "hi! Error"."           ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
+exe "hi! ErrorMsg"."        ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
+exe "hi! WarningMsg"."      ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
+exe "hi! Ignore"."          ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
+exe "hi! SpecialKey"."      ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
 " --------------------------------
 " Variable types
 " --------------------------------
@@ -249,4 +251,13 @@ exe  "hi!  xmlAttribPunct"."  ctermfg=".s:tYellow   ."  ctermbg=".s:none  ."  ct
 exe  "hi!  xmlEqual"."        ctermfg=".s:tYellow   ."  ctermbg=".s:none  ."  cterm=".s:none
 exe  "hi!  xmlTagName"."      ctermfg=".s:tMagenta  ."  ctermbg=".s:none  ."  cterm=".s:none
 exe  "hi!  xmlString"."       ctermfg=".s:tCyan     ."  ctermbg=".s:none  ."  cterm=".s:none
+" Go
+exe  "hi!  goPackage"."       ctermfg=".s:tGrey     ."  ctermbg=".s:none  ."  cterm=".s:none
+exe  "hi!  goImport"."       ctermfg=".s:tGrey     ."  ctermbg=".s:none  ."  cterm=".s:none
+exe  "hi!  goDeclaration"."       ctermfg=".s:tMagenta     ."  ctermbg=".s:none  ."  cterm=".s:none
+exe  "hi!  goRepeat"."       ctermfg=".s:tMagenta     ."  ctermbg=".s:none  ."  cterm=".s:none
+exe  "hi!  goParen"."       ctermfg=".s:tMagenta     ."  ctermbg=".s:none  ."  cterm=".s:none
+exe  "hi!  goBlock"."       ctermfg=".s:tMagenta     ."  ctermbg=".s:none  ."  cterm=".s:none
+exe  "hi!  goString"."       ctermfg=".s:tCyan    ."  ctermbg=".s:none  ."  cterm=".s:italic
+exe  "hi!  goDecimalInt"."       ctermfg=".s:tCyan    ."  ctermbg=".s:none  ."  cterm=".s:italic
 

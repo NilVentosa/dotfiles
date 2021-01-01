@@ -11,7 +11,7 @@ export PS1="\[\033[38;5;11m\][\[$(tput sgr0)\]\[\033[38;5;13m\]\u@\h\[$(tput sgr
 
 # ALIASES
 alias ls='ls --color=auto'
-alias v='nvim'
+alias vim='nvim'
 
 # VIM mode for bash
 set -o vi
