@@ -258,6 +258,7 @@ exe  "hi!  goDeclaration"."       ctermfg=".s:tMagenta     ."  ctermbg=".s:none 
 exe  "hi!  goRepeat"."       ctermfg=".s:tMagenta     ."  ctermbg=".s:none  ."  cterm=".s:none
 exe  "hi!  goParen"."       ctermfg=".s:tMagenta     ."  ctermbg=".s:none  ."  cterm=".s:none
 exe  "hi!  goBlock"."       ctermfg=".s:tMagenta     ."  ctermbg=".s:none  ."  cterm=".s:none
+exe  "hi!  goBoolean"."       ctermfg=".s:tYellow     ."  ctermbg=".s:none  ."  cterm=".s:none
 exe  "hi!  goString"."       ctermfg=".s:tCyan    ."  ctermbg=".s:none  ."  cterm=".s:italic
 exe  "hi!  goDecimalInt"."       ctermfg=".s:tCyan    ."  ctermbg=".s:none  ."  cterm=".s:italic
 

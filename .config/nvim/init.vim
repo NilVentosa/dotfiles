@@ -17,7 +17,6 @@ let mapleader = " "
 
  " Colorscheme thing
     colorscheme tucnak
-    "let &colorcolumn=join(range(104,105),',')
 
 " Find in subfolders
     set path+=**
@@ -27,10 +26,10 @@ let mapleader = " "
 
 "vimrc stuff
     "Open vimrc in a new tab
-    " map <C-v> :tabnew ~/.vimrc<CR><CR>
+        map <C-v> :tabnew ~/.config/nvim/init.vim<CR><CR>
     "Auto source vimrc after saving
-    autocmd! bufwritepost ~/repos/dotfiles/.vimrc source ~/repos/dotfiles/.vimrc
-    autocmd! bufwritepost ~/.vimrc source ~/.vimrc
+        autocmd! bufwritepost ~/.config/nvim/init.vim source ~/.config/nvim/init.vim
+        autocmd! bufwritepost ~/.config/nvim/init.vim
 
 "Copy pase
 	set pastetoggle=<F2>
@@ -47,17 +46,17 @@ let mapleader = " "
 	set expandtab
 
 "Display line numbers
-    set number relativenumber
+    set nonu nornu
 
     nnoremap <leader>n :call g:ToggleNuMode()<cr>
 
     function! g:ToggleNuMode()
-    if &rnu == 1
-        set nonu
-        set nornu
-    else
-        set number relativenumber
-    endif
+        if &rnu == 1
+            set nonu
+            set nornu
+        else
+            set number relativenumber
+        endif
     endfunction
 
 "vim-plug
@@ -67,16 +66,16 @@ let mapleader = " "
 					\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 		autocmd VimEnter * PlugInstall
 	endif 
-" VimPlugged 
-call plug#begin()
-    Plug 'fatih/vim-go'
-    Plug 'scrooloose/nerdtree'
-    Plug 'tomtom/tcomment_vim'
-    Plug 'Raimondi/delimitMate'
-    Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lock file'}
-call plug#end()
 
-  let delimitMate_expand_cr = 1
+    call plug#begin()
+        Plug 'fatih/vim-go'
+        Plug 'scrooloose/nerdtree'
+        Plug 'tomtom/tcomment_vim'
+        Plug 'Raimondi/delimitMate'
+        Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lock file'}
+    call plug#end()
+
+    let delimitMate_expand_cr = 1
 
 "Enable autocompletion
 	set wildmode=longest,list,full
@@ -89,13 +88,12 @@ call plug#end()
 
 "NerdTree
 	map <C-n> :NERDTreeToggle<CR>
-  let g:NERDTreeWinSize=40
-  let NERDTreeQuitOnOpen=1
+    let g:NERDTreeWinSize=40
+    let NERDTreeQuitOnOpen=1
 
 "Splits
     "Splits open bottom right
-        set splitright
-        set splitbelow 
+        set splitright splitbelow 
 
     "Splits movement
         map <C-h> <C-w>h
@@ -171,7 +169,7 @@ endfunc
     "ab sout System.out.prinln();<esc>hi
 
 " Status bar
-  source ~/.vim/scripts/statusbar.vim
+  source ~/.config/nvim/scripts/statusbar.vim
 
     " Terminal mode mappings
       " Move between splits
