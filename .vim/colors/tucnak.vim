@@ -261,4 +261,9 @@ exe  "hi!  goBlock"."       ctermfg=".s:tMagenta     ."  ctermbg=".s:none  ."  c
 exe  "hi!  goBoolean"."       ctermfg=".s:tYellow     ."  ctermbg=".s:none  ."  cterm=".s:none
 exe  "hi!  goString"."       ctermfg=".s:tCyan    ."  ctermbg=".s:none  ."  cterm=".s:italic
 exe  "hi!  goDecimalInt"."       ctermfg=".s:tCyan    ."  ctermbg=".s:none  ."  cterm=".s:italic
-
+" Netrw
+exe  "hi!  netrwDir"."       ctermfg=".s:tCyan    ."  ctermbg=".s:none  ."  cterm=".s:italic
+exe  "hi!  netrwTreeBar"."       ctermfg=".s:tBg    ."  ctermbg=".s:none  ."  cterm=".s:italic
+exe  "hi!  netrwPlain"."       ctermfg=".s:tMagenta    ."  ctermbg=".s:none  ."  cterm=".s:italic
+exe  "hi!  netrwSymLink"."       ctermfg=".s:tYellow    ."  ctermbg=".s:none  ."  cterm=".s:italic
+exe  "hi!  netrwClassify"."       ctermfg=".s:tCyan    ."  ctermbg=".s:none  ."  cterm=".s:italic
