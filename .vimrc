@@ -54,7 +54,6 @@ let mapleader = " "
 		autocmd VimEnter * PlugInstall
 	endif 
 	call plug#begin()
-      Plug 'scrooloose/nerdtree'
       Plug 'tomtom/tcomment_vim'
       Plug 'Raimondi/delimitMate'
       Plug 'cespare/vim-toml'
@@ -71,10 +70,57 @@ let mapleader = " "
 "Display highlights
 	set hlsearch
 
-"NerdTree
-	map <C-n> :NERDTreeToggle<CR>
-  let g:NERDTreeWinSize=40
-  let NERDTreeQuitOnOpen=1
+"Netrw
+	function! ToggleNetrw()
+    if g:NetrwIsOpen
+      let i = bufnr("$")
+      while (i >= 1)
+        if (getbufvar(i, "&filetype") == "netrw")
+          silent exe "bwipeout " . i
+        endif
+        let i-=1
+      endwhile
+      let g:NetrwIsOpen=0
+    else
+      let g:NetrwIsOpen=1
+      silent Lexplore
+    endif
+	endfunc
+
+  function! OpenRight()
+    :normal v
+    let g:path=expand('%:p')
+    :q!
+    execute 'belowright vnew' g:path
+    :normal <C-l>
+  endfunction
+
+  function! OpenBelow()
+    :normal v
+    let g:path=expand('%:p')
+    :q!
+    execute 'belowright new' g:path
+    :normal <C-l>
+  endfunction
+
+  let g:NetrwIsOpen = 0
+	let g:netrw_banner = 0
+	let g:netrw_liststyle = 3
+	let g:netrw_browse_split = 4
+	let g:netrw_winsize = 15
+
+  augroup netrw_mapping
+      autocmd!
+      autocmd filetype netrw call NetrwMapping()
+  augroup END
+
+  function! NetrwMapping()
+      noremap <buffer> V :call OpenRight()<CR>
+      noremap <buffer> H :call OpenBelow()<CR>
+      noremap <buffer> <C-l> <C-w>
+  endfunction
+	
+	map <C-n> :call ToggleNetrw()<CR>
 
 "Splits
     "Splits open bottom right
@@ -151,31 +197,7 @@ endfunc
     "ab sout System.out.prinln();<esc>hi
 
 " Status bar
-  source ~/.vim/scripts/statusbar.vim
-
-  " NVim specifics
   if has('nvim')
-    " Terminal mode mappings
-      " Move between splits
-      tnoremap <A-h> <C-\><C-N><C-w>h
-      tnoremap <A-j> <C-\><C-N><C-w>j
-      tnoremap <A-k> <C-\><C-N><C-w>k
-      tnoremap <A-l> <C-\><C-N><C-w>l
-
-      " ESC key bindings
-      tnoremap <Esc> <C-\><C-n>
-      tnoremap <M-[> <Esc>
-      tnoremap <C-v><Esc> <Esc>
-      
-      " No line numbers for terminal buffers
-      au TermOpen * setlocal listchars= nonumber norelativenumber
-      au TermOpen * setlocal laststatus=0
-
-      " Mouse support
-      set mouse=a
-
-      " Interactive find and replace
-      set inccommand=nosplit
-      nnoremap <Leader>k :%s/\<<C-r><C-w>\>//gc<Left><Left><Left>
-
+    source ~/.vim/scripts/statusbar.vim
   endif
+
