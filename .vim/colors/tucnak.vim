@@ -136,8 +136,8 @@ exe "hi! DiffText"."        ctermfg=".s:none		    ." ctermbg=".s:none		    ." ct
 " --------------------------------
 " Completion menu
 " --------------------------------
-exe "hi! Pmenu"."           ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
-exe "hi! PmenuSel"."        ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
+exe "hi! Pmenu"."           ctermfg=".s:tBlack		    ." ctermbg=".s:tGrey		    ." cterm=".s:none		
+exe "hi! PmenuSel"."        ctermfg=".s:tBlack		    ." ctermbg=".s:tMagenta		    ." cterm=".s:none		
 exe "hi! PmenuSbar"."       ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
 exe "hi! PmenuThumb"."      ctermfg=".s:none		    ." ctermbg=".s:none		    ." cterm=".s:none		
 " --------------------------------
@@ -153,6 +153,9 @@ exe "hi! SpellRare"."       ctermfg=".s:none		    ." ctermbg=".s:none		    ." ct
 "--------------------------------------------------------------------
 " Vim
 exe  "hi!  vimLineComment"."     ctermfg=".s:tGrey                                   
+exe  "hi!  vimFunction"."     ctermfg=".s:tYellow                                   
+exe  "hi!  vimOper"."     ctermfg=".s:tYellow                                   
+exe  "hi!  vimFuncKey"."     ctermfg=".s:tYellow                                   
 exe  "hi!  vimCommentTitle"."    ctermfg=".s:tGrey                                   
 exe  "hi!  vimString"."          ctermfg=".s:tWhite                                  
 exe  "hi!  vimVar"."             ctermfg=".s:tCyan                                   
@@ -212,7 +215,7 @@ exe  "hi!  markdownLinkDelimiter"."      ctermfg=".s:tMagenta  ."  ctermbg=".s:n
 exe  "hi!  pythonInclude"."      ctermfg=".s:tYellow   ."  ctermbg=".s:none  ."  cterm=".s:none
 exe  "hi!  pythonString"."       ctermfg=".s:tCyan     ."  ctermbg=".s:none  ."  cterm=".s:none
 exe  "hi!  pythonQuotes"."       ctermfg=".s:tCyan     ."  ctermbg=".s:none  ."  cterm=".s:none
-exe  "hi!  pythonFunction"."     ctermfg=".s:tMagenta  ."  ctermbg=".s:none  ."  cterm=".s:none
+exe  "hi!  pythonFunction"."     ctermfg=".s:tCyan  ."  ctermbg=".s:none  ."  cterm=".s:none
 exe  "hi!  pythonBuiltin"."      ctermfg=".s:tMagenta  ."  ctermbg=".s:none  ."  cterm=".s:none
 exe  "hi!  pythonConditional"."  ctermfg=".s:tMagenta  ."  ctermbg=".s:none  ."  cterm=".s:none
 exe  "hi!  pythonOperator"."     ctermfg=".s:tMagenta  ."  ctermbg=".s:none  ."  cterm=".s:none
@@ -253,17 +256,31 @@ exe  "hi!  xmlTagName"."      ctermfg=".s:tMagenta  ."  ctermbg=".s:none  ."  ct
 exe  "hi!  xmlString"."       ctermfg=".s:tCyan     ."  ctermbg=".s:none  ."  cterm=".s:none
 " Go
 exe  "hi!  goPackage"."       ctermfg=".s:tGrey     ."  ctermbg=".s:none  ."  cterm=".s:none
+exe  "hi!  goDirective"."       ctermfg=".s:tGrey     ."  ctermbg=".s:none  ."  cterm=".s:none
 exe  "hi!  goImport"."       ctermfg=".s:tGrey     ."  ctermbg=".s:none  ."  cterm=".s:none
 exe  "hi!  goDeclaration"."       ctermfg=".s:tMagenta     ."  ctermbg=".s:none  ."  cterm=".s:none
 exe  "hi!  goRepeat"."       ctermfg=".s:tMagenta     ."  ctermbg=".s:none  ."  cterm=".s:none
 exe  "hi!  goParen"."       ctermfg=".s:tMagenta     ."  ctermbg=".s:none  ."  cterm=".s:none
 exe  "hi!  goBlock"."       ctermfg=".s:tMagenta     ."  ctermbg=".s:none  ."  cterm=".s:none
 exe  "hi!  goBoolean"."       ctermfg=".s:tYellow     ."  ctermbg=".s:none  ."  cterm=".s:none
-exe  "hi!  goString"."       ctermfg=".s:tCyan    ."  ctermbg=".s:none  ."  cterm=".s:italic
-exe  "hi!  goDecimalInt"."       ctermfg=".s:tCyan    ."  ctermbg=".s:none  ."  cterm=".s:italic
+exe  "hi!  goType"."       ctermfg=".s:tYellow     ."  ctermbg=".s:none  ."  cterm=".s:none
+exe  "hi!  goSignedInts"."       ctermfg=".s:tYellow     ."  ctermbg=".s:none  ."  cterm=".s:none
+exe  "hi!  goConditional"."       ctermfg=".s:tMagenta     ."  ctermbg=".s:none  ."  cterm=".s:none
+exe  "hi!  goVar"."       ctermfg=".s:tMagenta     ."  ctermbg=".s:none  ."  cterm=".s:none
+exe  "hi!  goString"."       ctermfg=".s:tCyan    ."  ctermbg=".s:none  ."  cterm=".s:none
+exe  "hi!  goDecimalInt"."       ctermfg=".s:tCyan    ."  ctermbg=".s:none  ."  cterm=".s:none
 " Netrw
-exe  "hi!  netrwDir"."       ctermfg=".s:tCyan    ."  ctermbg=".s:none  ."  cterm=".s:italic
-exe  "hi!  netrwTreeBar"."       ctermfg=".s:tBg    ."  ctermbg=".s:none  ."  cterm=".s:italic
-exe  "hi!  netrwPlain"."       ctermfg=".s:tMagenta    ."  ctermbg=".s:none  ."  cterm=".s:italic
-exe  "hi!  netrwSymLink"."       ctermfg=".s:tYellow    ."  ctermbg=".s:none  ."  cterm=".s:italic
-exe  "hi!  netrwClassify"."       ctermfg=".s:tCyan    ."  ctermbg=".s:none  ."  cterm=".s:italic
+exe  "hi!  netrwDir"."       ctermfg=".s:tCyan    ."  ctermbg=".s:none  ."  cterm=".s:none
+exe  "hi!  netrwTreeBar"."       ctermfg=".s:tBg    ."  ctermbg=".s:none  ."  cterm=".s:none
+exe  "hi!  netrwPlain"."       ctermfg=".s:tMagenta    ."  ctermbg=".s:none  ."  cterm=".s:none
+exe  "hi!  netrwSymLink"."       ctermfg=".s:tYellow    ."  ctermbg=".s:none  ."  cterm=".s:none
+exe  "hi!  netrwClassify"."       ctermfg=".s:tCyan    ."  ctermbg=".s:none  ."  cterm=".s:none
+" JavaScript
+exe  "hi!  javascriptIdentifier"."       ctermfg=".s:tMagenta    ."  ctermbg=".s:none  ."  cterm=".s:none
+exe  "hi!  javascriptFunction"."       ctermfg=".s:tMagenta    ."  ctermbg=".s:none  ."  cterm=".s:none
+exe  "hi!  javascriptReserved"."       ctermfg=".s:tCyan    ."  ctermbg=".s:none  ."  cterm=".s:none
+exe  "hi!  javascriptStatement"."       ctermfg=".s:tCyan    ."  ctermbg=".s:none  ."  cterm=".s:none
+exe  "hi!  javascriptNumber"."       ctermfg=".s:tCyan    ."  ctermbg=".s:none  ."  cterm=".s:none
+exe  "hi!  javascriptBoolean"."       ctermfg=".s:tCyan    ."  ctermbg=".s:none  ."  cterm=".s:none
+exe  "hi!  javascriptStringS"."       ctermfg=".s:tCyan    ."  ctermbg=".s:none  ."  cterm=".s:none
+exe  "hi!  javascriptMember"."       ctermfg=".s:tYellow    ."  ctermbg=".s:none  ."  cterm=".s:none

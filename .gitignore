@@ -3,4 +3,5 @@ tags
 .local/bin/pipenv-resolver
 .local/bin/virtualenv
 .local/bin/virtualenv-clone
-
+.netrwhist
+.vim/plugged/

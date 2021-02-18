@@ -60,21 +60,21 @@ let mapleader = " "
     endfunction
 
 "vim-plug
-	if empty(glob('~/.vim/autoload/plug.vim'))
-		silent !mkdir -p ~/.vim/autoload
-		silent !curl -fLo ~/.vim/autoload/plug.vim
-					\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-		autocmd VimEnter * PlugInstall
-	endif 
-
-    call plug#begin()
-        Plug 'fatih/vim-go'
-        Plug 'tomtom/tcomment_vim'
-        Plug 'Raimondi/delimitMate'
-        Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lock file'}
-    call plug#end()
-
-    let delimitMate_expand_cr = 1
+	" if empty(glob('~/.vim/autoload/plug.vim'))
+	" 	silent !mkdir -p ~/.vim/autoload
+	" 	silent !curl -fLo ~/.vim/autoload/plug.vim
+	" 				\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	" 	autocmd VimEnter * PlugInstall
+	" endif 
+    "
+    " call plug#begin()
+    "     Plug 'fatih/vim-go'
+    "     Plug 'tomtom/tcomment_vim'
+    "     Plug 'Raimondi/delimitMate'
+    "     Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lock file'}
+    " call plug#end()
+    "
+    " let delimitMate_expand_cr = 1
 
 "Enable autocompletion
 	set wildmode=longest,list,full

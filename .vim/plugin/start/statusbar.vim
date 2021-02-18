@@ -40,20 +40,26 @@
     endif
   endfunction
 
+  function! FileName(file)
+      if a:file == ''
+          return '-'
+      else
+          let parts = split(a:file, "/")
+          return parts[len(parts) - 1]
+      endif
+  endfunction
+
   function! ActiveLine()
     let statusline = ""
     let statusline.='%#StatusLine#'
     " Current mode
     let statusline.='%#StatusLineCyan# %{ModeCurrent()} '
     let statusline.='%#StatusLine#'
-    " Current git branch
-    let statusline.='%#StatusLineYellow# %{GitBranch()} '
+    " File name
+    let statusline.='%#StatusLineCyan# .%{FileName(expand("%"))} '
     let statusline.='%#StatusLine#'
     "Right
     let statusline.='%='
-    " File name
-    let statusline.='%#StatusLineCyan# %f '
-    let statusline.='%#StatusLine#'
     " Current file type
     let statusline.='%#StatusLineMagenta# .%{FileType(&filetype)} '
     let statusline.='%#StatusLine#'
@@ -65,25 +71,22 @@
 
   function! InactiveLine()
     let statusline = ""
-    " File name
     let statusline.='%#StatusLineNC# %f '
     let statusline.='%#StatusLineNC#'
     return statusline
   endfunction
 
-  function! NERDLine()
+  function! NetrwLine()
     let statusline = ""
     let statusline.='%#StatusLineYellow#'
-    let statusline.='NERDTree'
-    " File name
+    let statusline.='netrw'
     return statusline
   endfunction
 
-  " Bar
   augroup Statusline
     autocmd!
+    autocmd FileType netrw setlocal statusline=%!NetrwLine()
     autocmd WinEnter,BufEnter * setlocal statusline=%!ActiveLine()
     autocmd WinLeave,BufLeave * setlocal statusline=%!InactiveLine()
-    autocmd FileType nerdtree setlocal statusline=%!NERDLine()
   augroup END
   set laststatus=2
