@@ -1,6 +1,0 @@
-#!/bin/sh
-
-sleep 0.5
-bspc rule -a whatsapp-nativefier-d52542 -o desktop='^10' && whatsapp-nativefier && sleep 0.5 &
-#bspc rule -a TelegramDesktop -o desktop='^10' && telegram-desktop && sleep 0.5 &
-bspc rule -a firefox -o desktop='^2' && firefox && sleep 0.5 &
