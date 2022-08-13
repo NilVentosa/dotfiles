@@ -1,0 +1,134 @@
+; vim:ft=dosini
+;==========================================================
+;
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;==========================================================
+
+[colors]
+black = ${xrdb:color0:#1d2021}
+darkred = ${xrdb:color1:#cc241d}
+darkgreen = ${xrdb:color2:#98971a}
+darkyellow = ${xrdb:color3:#d79921}
+darkblue = ${xrdb:color4:#458588}
+darkmagenta = ${xrdb:color5:#b16286}
+darkcyan = ${xrdb:color6:#689d6a}
+lightgray = ${xrdb:color7:#a89984}
+gray = ${xrdb:color8:#928374}
+red = ${xrdb:color9:#fb4934}
+green = ${xrdb:color10:#b8bb26}
+yellow = ${xrdb:color11:#fabd2f}
+blue = ${xrdb:color12:#83a598}
+magenta = ${xrdb:color13:#d3869b}
+cyan = ${xrdb:color14:#8ec07c}
+white = ${xrdb:color15:#ebdbb2}
+background = ${xrdb:background:#1d2021}
+background-alt = ${xrdb:background:#1d2021}
+foreground = ${xrdb:foreground:#ebdbb2}
+foreground-alt = ${xrdb:foreground:#ebdbb2}
+
+[bar/internal]
+monitor = eDP-1
+width = 100%
+height = 24
+background=${colors.background}
+
+modules-left = bspwm
+modules-center = time 
+modules-right = filesystem battery pulseaudio-control-output
+
+line-size = 3
+module-margin-left = 1
+module-margin-right = 1
+padding-left = 0
+padding-right = 1
+padding-top = 0
+
+
+[bar/LG]
+monitor = DP-2
+width = 100%
+height = 24
+background=${colors.background}
+
+modules-left = bspwm
+modules-center = time 
+modules-right = filesystem battery pulseaudio-control-output
+
+line-size = 3
+module-margin-left = 1
+module-margin-right = 1
+padding-left = 0
+padding-right = 1
+padding-top = 0
+
+
+[module/time]
+type = custom/script
+exec = date +%H:%M
+ 
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = ADP1
+
+[module/bspwm]
+type = internal/bspwm
+label-focused-padding-right = 1
+label-focused-padding-left = 0
+label-focused-background = ${colors.darkmagenta}
+label-occupied-foreground = ${colors.darkmagenta}
+pin-workspaces = true
+
+[module/filesystem]
+type = internal/fs
+interval = 25
+mount-0 = /
+label-mounted = / %percentage_used%%
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.foreground-alt}
+
+[module/pulseaudio-control-output]
+type = custom/script
+tail = true
+format-underline = ${colors.cyan}
+label-padding = 2
+label-foreground = ${colors.foreground}
+
+# Icons mixed from Font Awesome 5 and Material Icons
+# You can copy-paste your options for each possible action, which is more
+# trouble-free but repetitive, or apply only the relevant ones (for example
+# --node-blacklist is only needed for next-node).
+
+font-X = FontAwesome: style=Solid: pixelsize=11
+font-Z = Material Icons: style=Regular: pixelsize=13; 2
+
+; exec = pulseaudio-control --icons-volume " , " --icon-muted " " --node-nicknames-from "device.description" --node-nickname "alsa_output.usb-Logitech_USB_Headset_Logitech_USB_Headset-00.analog-stereo:Headphones" --node-nickname "alsa_output.pci-0000_00_1f.3.analog-stereo:Speakers" listen
+exec = pulseaudio-control --node-nicknames-from "device.description" --node-nickname "alsa_output.usb-Logitech_USB_Headset_Logitech_USB_Headset-00.analog-stereo:Headphones" --node-nickname "alsa_output.pci-0000_00_1f.3.analog-stereo:Speakers" listen
+click-right = exec pavucontrol &
+click-left = pulseaudio-control togmute
+click-middle = pulseaudio-control --node-blacklist "alsa_output.pci-0000_01_00.1.hdmi-stereo-extra2" next-node
+scroll-up = pulseaudio-control --volume-max 130 up
+scroll-down = pulseaudio-control --volume-max 130 down
+
+
+[module/pulseaudio-control-input]
+type = custom/script
+tail = true
+format-underline = ${colors.cyan}
+label-padding = 2
+label-foreground = ${colors.foreground}
+
+# Use --node-blacklist to remove the unwanted PulseAudio .monitor that are child of sinks
+exec = pulseaudio-control  --node-type input --icons-volume " , , " --icon-muted "" --node-nickname "alsa_output.pci-0000_0c_00.3.analog-stereo:  Webcam" --node-nickname "alsa_output.usb-Kingston_HyperX_Virtual_Surround_Sound_00000000-00.analog-stereo:  Headphones" --node-blacklist "*.monitor" listen
+click-right = exec pavucontrol &
+click-left = pulseaudio-control --node-type input togmute
+click-middle = pulseaudio-control --node-type input next-node
+scroll-up = pulseaudio-control --node-type input --volume-max 130 up
+scroll-down = pulseaudio-control --node-type input --volume-max 130 down

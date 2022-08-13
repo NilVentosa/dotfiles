@@ -1,29 +1,30 @@
-! tucnak color scheme
-! Special !15 !233 !15
-*.foreground:   #ffffff 
-*.background:   #121212 
-*.cursorColor:  #ffffff 
-! black !16
-*.color0:       #000000 
-*.color8:       #000000 
-! red !197
-*.color1:       #ff005f 
-*.color9:       #ff005f 
-! green !81
-*.color2:       #5fd7ff 
-*.color10:      #5fd7ff 
-! yellow !226
-*.color3:       #ffff00 
-*.color11:      #ffff00 
-! blue !17
-*.color4:       #00005f 
-*.color12:      #00005f 
-! magenta !197
-*.color5:       #ff005f 
-*.color13:      #ff005f 
-! cyan !81
-*.color6:       #5fd7ff 
-*.color14:      #5fd7ff 
-! white !15
-*.color7:       #ffffff 
-*.color15:      #ffffff 
+xterm*faceName: Monospace
+xterm*faceSize: 10
+
+XTerm.vt100.translations: #override \n\
+	Ctrl <Key> minus: smaller-vt-font() \n\
+	Ctrl <Key> plus: larger-vt-font()
+
+XTerm*vt100.Translations: #override \
+	Ctrl <Key>V: insert-selection(CLIPBOARD) \n\
+	Ctrl Shift <Key>C: copy-selection(CLIPBOARD)
+
+! Dracula Xresources palette
+*.foreground: #F8F8F2
+*.background: #282A36
+*.color0:     #000000
+*.color8:     #4D4D4D
+*.color1:     #FF5555
+*.color9:     #FF6E67
+*.color2:     #50FA7B
+*.color10:    #5AF78E
+*.color3:     #F1FA8C
+*.color11:    #F4F99D
+*.color4:     #BD93F9
+*.color12:    #CAA9FA
+*.color5:     #FF79C6
+*.color13:    #FF92D0
+*.color6:     #8BE9FD
+*.color14:    #9AEDFE
+*.color7:     #BFBFBF
+*.color15:    #E6E6E6

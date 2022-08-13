@@ -1,0 +1,76 @@
+super + Return
+	/usr/bin/xterm
+super + @space
+	dmenu_run -fn Monospace-15
+
+super + shift + r
+	pkill -USR1 -x sxhkd
+
+super + q
+	bspc node -{c,k}
+
+
+# close without killing
+super + w
+	bspc node -{c}
+
+Print
+	flameshot gui
+
+super + Escape
+	pkill -USR1 -x sxhkd
+
+# focus or send to the given desktop
+#super + {_,shift + }{1-9,0}
+#	bspc {desktop -f,node -d} '^{1-9,0}'
+
+super + {_,shift + }{1-9,0}
+  { bspc desktop --focus \
+  , bspc node --to-desktop \
+  } {1,2,3,4,5,6,7,8,9,0}
+
+# Hide unhide nodes
+super + alt + h
+    hide.sh hide
+super + alt + shift + h
+    hide.sh unhide
+
+# swap the current node and the biggest node
+super + g
+	bspc node -s biggest
+
+# focus the node in the given direction
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+
+# expand/contract a window 
+super + alt + {h,j,k,l}
+  bspc node -z {left -20 0 || bspc node -z right -20 0, \
+                bottom 0 20 || bspc node -z top 0 20,\
+                top 0 -20 || bspc node -z bottom 0 -20,\
+                right 20 0 || bspc node -z left 20 0}
+
+# media controls
+XF86AudioRaiseVolume
+    pactl -- set-sink-volume 0 +5%;pactl -- set-sink-volume 1 +5%;pactl -- set-sink-volume 2 +5%
+XF86AudioLowerVolume
+    pactl -- set-sink-volume 0 -5%;pactl -- set-sink-volume 1 -5%;pactl -- set-sink-volume 2 -5%
+XF86AudioMute
+    pactl set-sink-mute true
+XF86AudioNext
+    playerctl next
+XF86AudioPrev
+    playerctl previous
+XF86AudioPlay
+    playerctl play-pause
+
+# screen controls
+XF86MonBrightnessUp
+    xbacklight -inc 10
+XF86MonBrightnessDown
+    xbacklight -dec 10
+
+# keyboard brightness
+XF86KbdBrightnessUp
+XF86KbdBrightnessDown
+
