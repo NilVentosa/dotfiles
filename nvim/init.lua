@@ -6,6 +6,6 @@ require('plugins')
 require('config')
 require('bindings')
 require('treesitter')
- require('lsp')
+require('lsp')
 require('completion')
 

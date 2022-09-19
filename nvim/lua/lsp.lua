@@ -71,7 +71,6 @@ cmp.setup({
   },
 })
 
--- LUA
 nkeymap('gd', ':lua vim.lsp.buf.definition()<cr>')
 nkeymap('gD', ':lua vim.lsp.buf.declaration()<cr>')
 nkeymap('gi', ':lua vim.lsp.buf.implementation()<cr>')
@@ -83,4 +82,5 @@ nkeymap('<leader>h', ':lua vim.lsp.buf.hover()<cr>')
 nkeymap('<c-k>', ':lua vim.lsp.buf.signature_help()<cr>')
 nkeymap('<leader>af', ':lua vim.lsp.buf.code_action()<cr>')
 nkeymap('<leader>rn', ':lua vim.lsp.buf.rename()<cr>')
+nkeymap('<leader>d', ':lua vim.diagnostic.open_float()<cr>')
 
