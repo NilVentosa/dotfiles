@@ -27,6 +27,7 @@ return require('packer').startup(function(use)
     use 'saadparwaiz1/cmp_luasnip'    
     use 'L3MON4D3/LuaSnip'
     use 'tomtom/tcomment_vim'
+    use 'nvim-treesitter/nvim-treesitter'
 
     if packer_bootstrap then
         require('packer').sync()
