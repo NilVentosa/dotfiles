@@ -17,3 +17,8 @@ keymap('n', '<leader>j', ':%!jq .<CR>', {})
 -- NETRW
 keymap('n', '<C-n>', ':call ToggleNetrw()<CR>', {})
 
+-- Telescope
+keymap("n", "<leader><leader>", "<cmd>Telescope find_files<CR>", {})
+
+-- Highlights
+keymap("n", "<leader>h", "<cmd>noh<CR>", {})

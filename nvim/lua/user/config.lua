@@ -2,7 +2,7 @@
 --
 
 -- Options
-  vim.opt.expandtab = true
+vim.opt.expandtab = true
 vim.opt.shiftround = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4 
@@ -24,6 +24,7 @@ vim.opt.autowriteall = true -- Save automatically
 vim.opt.swapfile = false -- No swap files
 vim.opt.path = '.,**'
 vim.opt.clipboard = 'unnamedplus'
+vim.opt.completeopt={"menu","menuone","noselect"}
 
 -- Color
 require('monokai').setup {}
@@ -34,3 +35,5 @@ require('monokai').setup { palette = require('monokai').ristretto }
 vim.cmd[[syntax enable]]
 vim.cmd[[filetype plugin indent on]]
 
+-- From plugins
+vim.g.delimitMate_expand_cr = 1

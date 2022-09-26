@@ -7,4 +7,5 @@ require('user.keymapping')
 require('user.plugins')
 require('user.telescope')
 require('user.lsp')
+require('user.cmp')
 

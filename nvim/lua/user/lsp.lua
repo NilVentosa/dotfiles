@@ -2,10 +2,13 @@
 -- 
 -- -- RUST
 
+-- Set up lspconfig.
+local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+
 require 'lspconfig'.rust_analyzer.setup{
+    capabilities = capabilities,
     on_attach = function()
         vim.keymap.set("n", "K", vim.lsp.buf.hover, {buffer=0})
-        vim.keymap.set("n", "<leader><leader>", "<cmd>Telescope find_files<CR>", {})
         -- lsp stuff
         vim.keymap.set("n", "gd", vim.lsp.buf.definition, {buffer=0})
         vim.keymap.set("n", "gT", vim.lsp.buf.type_definition, {buffer=0})
@@ -18,3 +21,4 @@ require 'lspconfig'.rust_analyzer.setup{
         vim.keymap.set("n", "<leader>dl", "<cmd>Telescope diagnostics<CR>", {})
     end,
 }
+
