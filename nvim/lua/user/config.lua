@@ -1,17 +1,17 @@
 -- CONFIG
+--
 
 -- Options
-vim.opt.expandtab = true
+  vim.opt.expandtab = true
 vim.opt.shiftround = true
-vim.opt.tabstop = 2
-vim.opt.shiftwidth = 2
-vim.opt.softtabstop = 2
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4 
+vim.opt.softtabstop = 4
 vim.opt.laststatus = 3 -- Only one statusbar
 vim.opt.rnu = true -- Relative number
 vim.opt.nu = true -- Line number
 vim.opt.scrolloff = 5
 vim.opt.wildmenu = true
-vim.opt.clipboard = 'unnamedplus'  -- System clipboard
 vim.opt.wildmode = 'longest,list,full'
 vim.opt.splitright = true  -- Default splits right
 vim.opt.splitbelow = true  -- Default splits below
@@ -23,10 +23,13 @@ vim.opt.foldenable = false -- Disable folding
 vim.opt.autowriteall = true -- Save automatically
 vim.opt.swapfile = false -- No swap files
 vim.opt.path = '.,**'
+vim.opt.clipboard = 'unnamedplus'
 
 -- Color
-vim.g.colors_name = 'dracula'
-vim.opt.background = 'dark'
+require('monokai').setup {}
+require('monokai').setup { palette = require('monokai').pro }
+require('monokai').setup { palette = require('monokai').soda }
+require('monokai').setup { palette = require('monokai').ristretto }
 
 vim.cmd[[syntax enable]]
 vim.cmd[[filetype plugin indent on]]

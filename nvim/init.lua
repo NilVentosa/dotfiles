@@ -2,10 +2,9 @@
 -- -- INIT.LUA
 -- 
 
-require('plugins')
-require('config')
-require('bindings')
-require('treesitter')
-require('lsp')
-require('completion')
+require('user.config')
+require('user.keymapping')
+require('user.plugins')
+require('user.telescope')
+require('user.lsp')
 
