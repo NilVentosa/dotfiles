@@ -27,7 +27,6 @@ vim.opt.clipboard = 'unnamedplus'
 vim.opt.completeopt={"menu","menuone","noselect"}
 
 -- Color
-require('monokai').setup {}
 require('monokai').setup { palette = require('monokai').pro }
 require('monokai').setup { palette = require('monokai').soda }
 require('monokai').setup { palette = require('monokai').ristretto }
