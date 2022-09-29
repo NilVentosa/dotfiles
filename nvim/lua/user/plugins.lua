@@ -28,6 +28,8 @@ return require('packer').startup(function(use)
     use 'L3MON4D3/LuaSnip'
     use 'tomtom/tcomment_vim'
     use 'nvim-treesitter/nvim-treesitter'
+    use 'Mofiqul/dracula.nvim'
+    use 'bash-lsp/bash-language-server'
 
     if packer_bootstrap then
         require('packer').sync()

@@ -8,8 +8,9 @@ vim.g.mapleader = " "
 keymap('n', '<c-u>', '10k',{})
 keymap('n', '<c-d>', '10j',{})
 
--- Open file under cursor in vertical split
+-- Open files under cursor in splits
 keymap('n', 'gs', ':vertical wincmd f<CR>', {})
+keymap('n', 'gh', '<C-W>f', {})
 
 -- JSON formatting
 keymap('n', '<leader>j', ':%!jq .<CR>', {})

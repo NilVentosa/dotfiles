@@ -27,10 +27,9 @@ vim.opt.clipboard = 'unnamedplus'
 vim.opt.completeopt={"menu","menuone","noselect"}
 
 -- Color
-require('monokai').setup { palette = require('monokai').pro }
-require('monokai').setup { palette = require('monokai').soda }
-require('monokai').setup { palette = require('monokai').ristretto }
+vim.cmd[[colorscheme dracula]]
 
+--
 vim.cmd[[syntax enable]]
 vim.cmd[[filetype plugin indent on]]
 
